@@ -8,3 +8,4 @@ checkpoints/
 logs/
 cache/
 .ipynb_checkpoints/
+.~lock.*#
