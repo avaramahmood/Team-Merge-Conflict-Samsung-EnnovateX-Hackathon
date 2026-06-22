@@ -101,7 +101,7 @@ BASE_MODEL  = "inputs/models/qwen2-5-7b/qwen2.5-7b"
 TRACES_PATH = "inputs/data/32b-qwen-pear-traces"
 OUT         = "outputs"
 
-PEAR_MODE   = "centered"     # "centered" (robust default) | "raw" (paper) | "uniform" (control)
+PEAR_MODE   = "uniform"     # "centered" (robust default) | "raw" (paper) | "uniform" (control)
 INCLUDE_NEG = False          # repulsion off for first robust run; True to ablate
 
 EPOCHS        = 1            # PEAR thesis: 1 epoch
