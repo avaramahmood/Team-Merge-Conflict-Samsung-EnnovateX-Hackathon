@@ -1,25 +1,4 @@
 """
-NOTEBOOK 2 - PEAR SFT TRAINING  (v13)
-======================================
-Reads:  pear_sft_final.jsonl  (32B AWQ teacher traces, Qwen2.5-7B base student)
-Saves:  outputs/pear_sft_epoch1                    (model)
-        outputs/logs/run_{ts}/train.jsonl          (per-step metrics)
-        outputs/logs/run_{ts}/metadata.json        (frozen config)
-        outputs/logs/run_{ts}/summary.json         (final rollup)
-
-Why v13 differs from v11/v12
-============================
-pi_beta = R1-Distill-Qwen-32B (AWQ 4-bit), pi_theta = Qwen2.5-7B BASE.
-These are far apart, so raw token delta = log pi_theta - log pi_beta is
-net-negative on almost every reasoning token (a 7B base model is less
-confident than a 32B specialized reasoner) and saturates the clip on
-format tokens. Accumulated backwards, the raw PEAR weight collapses to
-~exp(-10) on early reasoning tokens and ~1 on the final tokens, so SFT
-effectively trains only the answer region. That reproduces the StrategyQA
-format-drift / shortcut failure. Run pear_diagnostic.py to see it.
-
-Changes vs v12
---------------
 1. PEAR_MODE switch:
      "centered" (DEFAULT, robust): subtract the per-trace mean delta so the
        weight tracks WITHIN-trace relative agreement, not the global model-gap
@@ -122,7 +101,7 @@ BASE_MODEL  = "inputs/models/qwen2-5-7b/qwen2.5-7b"
 TRACES_PATH = "inputs/data/32b-qwen-pear-traces"
 OUT         = "outputs"
 
-PEAR_MODE   = "uniform"     # "centered" (robust default) | "raw" (paper) | "uniform" (control)
+PEAR_MODE   = "centered"     # "centered" (robust default) | "raw" (paper) | "uniform" (control)
 INCLUDE_NEG = False          # repulsion off for first robust run; True to ablate
 
 EPOCHS        = 1            # PEAR thesis: 1 epoch
