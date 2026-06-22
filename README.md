@@ -13,8 +13,7 @@
 - **Full Submission Demo Video (YouTube)**: https://www.youtube.com/watch?v=MDBy_jutLqw&t=1s
 - **Setup & Result Reproducibility Video (YouTube)**: https://www.youtube.com/watch?v=C75xsYAc7ow
 
-**Key links** — Model: https://huggingface.co/modmood/qwen-2.5-7b-trained/tree/main · Dataset: https://huggingface.co/datasets/modmood/RIVA-DATASET/tree/main · On-device app: https://github.com/avaramahmood/reasoning-agentic-harness · Paper: https://drive.google.com/uc?export=download&id=1zcxSANHbgyO_7NxDbH5bMKfOCiTiJF5V
-
+**Key links** — Model: https://huggingface.co/modmood/qwen-2.5-7b-trained/tree/main · Dataset: https://huggingface.co/datasets/modmood/RIVA-DATASET/tree/main · On-device app: https://github.com/avaramahmood/reasoning-agentic-harness · Paper: https://drive.google.com/uc?export=download&id=1-TBiAmNOlnr9r1ZdY6CHs1fIkZhRy_02
 ---
 
 ## 1. What we built
