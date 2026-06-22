@@ -52,6 +52,14 @@ One epoch, 188 optimizer steps, AdamW8bit, lr 1e-5, `PEAR_MODE=uniform`. Loss fa
 
 ![sft loss](figures/fig_sft_loss.png)
 
+The choice of `PEAR_MODE=uniform` is itself an ablation: we ran the same cold start with the
+`paper` (raw PEAR weight) and `centered` (mean-subtracted) modes
+(`pear_sft_paper.csv`, `pear_sft_centered.csv`). Reweighting gave no reliable val-loss gain
+(paper 0.536, centered 0.569 vs uniform 0.552) at ~2× the gradient noise, so `uniform` ships.
+See [results-and-kpis.md](results-and-kpis.md#pear-sft-weighting-ablation-why-we-ship-uniform).
+
+![sft variants](figures/fig_sft_variants.png)
+
 ---
 
 ## Baseline & SFT evaluation

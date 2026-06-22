@@ -67,12 +67,35 @@ implemented two corrections (`PEAR_MODE`):
   every trace contributes equally regardless of length;
 - `uniform`, plain weighted SFT (all token weights = 1), our robustness control.
 
+**The weighting ablation (the data behind the decision).** We ran the cold start three ways,
+identical except for `PEAR_MODE`: `uniform` (all token weights 1), `paper` (the raw PEAR
+weight), and `centered` (per-trace mean-subtracted). One epoch, 189 steps each.
+
+![sft variants](figures/fig_sft_variants.png)
+
+| Mode | Val loss | Steady-state grad norm (steps 50-150) | Step-1 grad norm |
+|---|---|---|---|
+| **`uniform` (shipped)** | 0.552 | **2.34** | 16.5 |
+| `paper` (raw PEAR weight) | 0.536 | 4.64 (~2×) | 27.25 |
+| `centered` (mean-subtracted) | 0.569 | 3.50 (~1.5×) | 28.62 |
+
+Two things are decisive. **First, the reweighting buys no reliable validation gain:** `paper`
+is only 0.016 below `uniform` (well within single-seed, single-epoch noise) and `centered` is
+actually 0.017 **worse**. The token-level importance signal that helps a like-sized teacher
+does not transfer cleanly to a 32B→7B gap. **Second, it roughly doubles gradient noise:**
+`uniform` trains at a steady grad norm of 2.34, against 4.64 for `paper` and 3.50 for
+`centered`, with step-1 norms of 16.5 vs ~27-29. That is exactly the wrong trade on a stage
+whose only job is to be a clean, low-variance launch point for RL.
+
 **Caveat / decision.** On a from-scratch 32B→7B distillation, the `centered` weighting and
 the negative-trace repulsion are *risky* (the repulsion term goes inert anyway, and any
-mis-scaled weight directly corrupts a single-epoch cold start). We therefore **shipped
-`uniform`** for the checkpoint that feeds RL, and keep `centered`/`raw`/`+neg` as ablations.
-This is the conservative call: the value of Layer 1 here is the **format + correct-trace
-curriculum**, and we did not want a fragile weight to poison the RL launch point.
+mis-scaled weight directly corrupts a single-epoch cold start). The ablation above confirms it
+empirically: no validation upside, ~2× the gradient variance, and an irrecoverable failure
+mode if a weight is mis-scaled in a one-epoch run. We therefore **shipped `uniform`** for the
+checkpoint that feeds RL, and keep `centered`/`paper`/`+neg` as ablations
+(`results/training_logs/pear_sft_{paper,centered,modes}.csv`). This is the conservative call:
+the value of Layer 1 here is the **format + correct-trace curriculum**, and we did not want a
+fragile weight to poison the RL launch point.
 
 **Result.** PEAR-SFT, evaluated in its **native** think/answer format:
 

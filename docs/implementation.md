@@ -41,7 +41,10 @@ discount, **mean-centered** (removes the 32B-vs-7B confidence offset that otherw
 the weight to `exp(−10)` on early tokens), symmetric-clipped, and **renormalised to mean 1**
 so every trace contributes equally regardless of length. Loss is **fp32 per-item
 cross-entropy** on the trace span only (prompt masked), PEAR-weighted. `uniform` mode (all
-weights = 1) is the shipped, robust control.
+weights = 1) is the shipped, robust control: an ablation across the three modes showed the
+reweighting gives no reliable val-loss gain (`paper` 0.536, `centered` 0.569 vs `uniform`
+0.552) at ~2× the gradient noise, so the cold start ships unweighted (see
+[results-and-kpis.md](results-and-kpis.md#pear-sft-weighting-ablation-why-we-ship-uniform)).
 
 ### Shared-tokenizer logprob alignment (`src/data/rescore_pear_aligned.py`)
 Both teacher and student are run on the **same** base-tokenized `input_ids`, making the two

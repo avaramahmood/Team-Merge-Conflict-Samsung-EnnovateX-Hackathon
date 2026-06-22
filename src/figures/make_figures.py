@@ -233,6 +233,44 @@ def fig_sft_loss():
     save(fig, "fig_sft_loss.png")
 
 
+def fig_sft_variants():
+    """PEAR-SFT weighting ablation: why we ship `uniform`.
+    Left: training-loss curves for the three weighting modes (paper/centered are full
+    per-step series; uniform is the four logged points). Right: steady-state grad-norm
+    (steps 50-150) - the reweighted variants run ~1.5-2x noisier for no reliable val gain."""
+    paper = load_csv("pear_sft_paper.csv")
+    cent = load_csv("pear_sft_centered.csv")
+    uni = load_csv("pear_sft.csv")
+    mrows = list(csv.DictReader(open(os.path.join(LOGS, "pear_sft_modes.csv"))))
+    gn = {r["mode"]: float(r["steady_grad_norm"]) for r in mrows}
+    col = {"uniform": C["grpo"], "paper": C["sft"], "centered": C["concise"]}
+    fig, (axL, axR) = plt.subplots(1, 2, figsize=(11.5, 4.2))
+
+    # Left: loss curves
+    axL.plot(paper["step"], smooth(paper["loss"]), color=col["paper"], lw=1.8,
+             label="paper (val 0.536)")
+    axL.plot(cent["step"], smooth(cent["loss"]), color=col["centered"], lw=1.8,
+             label="centered (val 0.569)")
+    axL.plot(uni["step"], uni["loss"], "-o", color=col["uniform"], lw=2.0, ms=5,
+             label="uniform - shipped (val 0.552)")
+    axL.set_xlabel("Optimizer step (1 epoch)"); axL.set_ylabel("CE loss (5-step MA)")
+    axL.set_title("PEAR-SFT weighting: training loss")
+    axL.legend(fontsize=8.5)
+
+    # Right: steady-state grad norm by mode
+    modes = ["uniform", "paper", "centered"]
+    x = np.arange(len(modes))
+    bars = axR.bar(x, [gn[mm] for mm in modes], color=[col[mm] for mm in modes], width=0.6)
+    for b, mm in zip(bars, modes):
+        axR.text(b.get_x() + b.get_width() / 2, b.get_height() + 0.05,
+                 f"{gn[mm]:.2f}", ha="center", fontsize=9)
+    axR.set_xticks(x); axR.set_xticklabels(["uniform\n(shipped)", "paper", "centered"])
+    axR.set_ylabel("Steady-state grad norm (steps 50-150)")
+    axR.set_title("Reweighting ~2x's gradient noise")
+    axR.set_ylim(0, max(gn.values()) * 1.25)
+    save(fig, "fig_sft_variants.png")
+
+
 # ──────────── 10. Quantization fidelity ────────────────────────────────
 def fig_quant():
     fig, axes = plt.subplots(1, 2, figsize=(9.2, 4.0))
@@ -418,6 +456,7 @@ if __name__ == "__main__":
     fig_kl_stability()
     fig_conciseness()
     fig_sft_loss()
+    fig_sft_variants()
     fig_quant()
     fig_pool()
     fig_answer_tag()

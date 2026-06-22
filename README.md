@@ -101,6 +101,24 @@ measured KPI in this repository; it exists to make the cost of reward hacking vi
 
 ![idealized](docs/figures/illustrative_sqa_trajectory.png)
 
+### Why the cold start ships `uniform` (PEAR weighting ablation)
+
+We trained the Layer-1 cold start three ways, identical except for the PEAR token-weight mode.
+The reweighting buys no reliable validation gain while roughly doubling gradient noise, so we
+ship the plain `uniform` checkpoint as the RL launch point.
+
+![sft variants](docs/figures/fig_sft_variants.png)
+
+| Mode | Val loss | Steady grad norm (steps 50-150) | Decision |
+|---|---|---|---|
+| **`uniform`** | 0.552 | **2.34** | **shipped** |
+| `paper` (raw PEAR weight) | 0.536 | 4.64 (~2×) | ablation |
+| `centered` (mean-subtracted) | 0.569 | 3.50 (~1.5×) | ablation |
+
+`paper` is only 0.016 below `uniform` (within single-seed noise) and `centered` is actually
+worse, so the importance weighting does not justify ~2× the gradient variance on a one-epoch
+cold start. Details in [docs/methods-and-observations.md](docs/methods-and-observations.md).
+
 ## 4. Repository layout
 
 ```

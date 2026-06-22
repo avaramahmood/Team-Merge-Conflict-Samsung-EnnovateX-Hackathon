@@ -36,6 +36,25 @@ logs in `final.ipynb`.
 The zero-shot SFT dip (esp. StrategyQA → 69.4) is the RL launch point: it is the headroom
 GRPO recovers and the surface reward hacking tries to shortcut.
 
+## PEAR-SFT weighting ablation (why we ship `uniform`)
+
+![sft variants](figures/fig_sft_variants.png)
+
+Three single-epoch cold starts differing only in the PEAR token-weight mode:
+
+| Mode | Val loss | Steady-state grad norm (steps 50-150) | Step-1 grad norm | Decision |
+|---|---|---|---|---|
+| **`uniform`** | 0.552 | **2.34** | 16.5 | **shipped** |
+| `paper` (raw PEAR weight) | 0.536 | 4.64 (~2×) | 27.25 | ablation |
+| `centered` (mean-subtracted) | 0.569 | 3.50 (~1.5×) | 28.62 | ablation |
+
+The reweighting gives **no reliable validation gain** (`paper` 0.016 lower than `uniform`,
+within single-seed noise; `centered` actually 0.017 worse) while running at **~2× the gradient
+noise**. On a one-epoch cold start whose only purpose is a clean, low-variance RL launch point,
+that is the wrong trade, so we ship `uniform`. Full per-step series in
+[`results/training_logs/pear_sft_{paper,centered,modes}.csv`](../results/training_logs/); see
+[methods-and-observations.md](methods-and-observations.md#layer-1-pear-sft-a-cold-start-designed-for-rl).
+
 ## GRPO variant ablation
 
 ![variants](figures/fig_grpo_variants.png)
