@@ -10,8 +10,8 @@
 - **Team members**: Aarushi Jha, Avaram Mahmood Ul Hasan
 - **Institute/College**: Vellore Institute of Technology, Vellore Campus, Tiruvalam Road, Katpadi, Vellore, Tamil Nadu 632014
 - **Final Presentation (Google Drive)**: https://docs.google.com/presentation/d/1QWc9WuztQ6Orm2a_wmnmW3g6OuS3tM5HvjHsBUElMqM/edit?usp=sharing
-- **Full Submission Demo Video (YouTube)**: https://www.youtube.com/watch?v=etZjAwqjOcY
-- **Setup & Result Reproducibility Video (YouTube)**: https://www.youtube.com/watch?v=N0dODAPijZ8&t=6s
+- **Full Submission Demo Video (YouTube)**: https://www.youtube.com/watch?v=MDBy_jutLqw&t=1s
+- **Setup & Result Reproducibility Video (YouTube)**: https://www.youtube.com/watch?v=C75xsYAc7ow
 
 **Key links** — Model: https://huggingface.co/modmood/qwen-2.5-7b-trained/tree/main · Dataset: https://huggingface.co/datasets/modmood/RIVA-DATASET/tree/main · On-device app: https://github.com/avaramahmood/reasoning-agentic-harness
 
