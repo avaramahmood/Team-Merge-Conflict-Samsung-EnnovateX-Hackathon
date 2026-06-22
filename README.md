@@ -177,7 +177,6 @@ Every figure in this repository is regenerated from the parsed run logs with
 | StrategyQA | https://huggingface.co/datasets/ChilleD/StrategyQA | MIT |
 | CommonsenseQA 2.0 | https://huggingface.co/datasets/tasksource/commonsense_qa_2.0 | CC-BY |
 | MMLU | https://huggingface.co/datasets/cais/mmlu | MIT |
-| AQuA-RAT | https://huggingface.co/datasets/deepmind/aqua_rat | Apache-2.0 |
 
 ## 9. Datasets published
 
