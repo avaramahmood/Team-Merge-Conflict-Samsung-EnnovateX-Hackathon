@@ -1,0 +1,150 @@
+PRIOR RUN v2 (progression.ipynb): fixed eval harness + PROF-GRPO Stage 1
+Source: progression.ipynb cells 11, 13, 14
+======================================================================
+
+[BASE, base_fewshot]
+EVAL_MODE = base_fewshot
+Loading model: /kaggle/input/models/mahmoodavaram/qwen2-5-7b/transformers/default/1/qwen2.5-7b
+
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights: 100%
+ 339/339 [04:13<00:00,  1.52it/s, Materializing param=model.norm.weight]
+
+Model loaded. eos ids: [151643]
+
+GSM8K 1319 | StrategyQA 687 | MMLU 570 (stratified)
+
+--- GSM8K ---
+  16/1319 | acc 75.0%
+  176/1319 | acc 81.2%
+  336/1319 | acc 82.7%
+  496/1319 | acc 83.3%
+  656/1319 | acc 82.9%
+  816/1319 | acc 82.4%
+  976/1319 | acc 83.0%
+  1136/1319 | acc 82.4%
+  1296/1319 | acc 82.9%
+GSM8K: 82.9%
+
+--- MMLU ---
+  16/570 | acc 37.5%
+  176/570 | acc 65.9%
+  336/570 | acc 73.5%
+  496/570 | acc 72.6%
+MMLU: 72.8%
+
+--- StrategyQA ---
+  16/687 | acc 62.5%
+  176/687 | acc 80.1%
+  336/687 | acc 77.1%
+  496/687 | acc 78.2%
+  656/687 | acc 77.7%
+StrategyQA: 77.9%
+
+=======================================================
+RESULTS: qwen2.5-7b  [base_fewshot]
+=======================================================
+GSM8K      : 82.9%
+MMLU       : 72.8%
+StrategyQA : 77.9%
+Average    : 77.9%
+=======================================================
+
+Saved: /kaggle/working/eval_results/qwen2.5-7b__base_fewshot.json
+
+======================================================================
+[PEAR-SFT, think_fewshot]
+EVAL_MODE = think_fewshot
+Loading model: /kaggle/input/models/mahmoodavaram/distilled-qwen-sft-basic/transformers/default/1/pear_sft_epoch1
+
+Loading weights: 100%
+ 339/339 [01:52<00:00,  4.86it/s, Materializing param=model.norm.weight]
+
+Model loaded. eos ids: [151643, 151645]
+
+GSM8K 1319 | StrategyQA 687 | MMLU 570 (stratified)
+
+--- GSM8K ---
+  16/1319 | acc 75.0%
+  176/1319 | acc 89.2%
+  336/1319 | acc 89.3%
+  496/1319 | acc 87.5%
+  656/1319 | acc 87.7%
+  816/1319 | acc 86.8%
+  976/1319 | acc 87.2%
+  1136/1319 | acc 87.1%
+  1296/1319 | acc 87.1%
+GSM8K: 86.7% | <answer> rate 1318/1319 = 100%
+
+--- MMLU ---
+  16/570 | acc 56.2%
+  176/570 | acc 65.3%
+  336/570 | acc 71.7%
+  496/570 | acc 72.2%
+MMLU: 71.4% | <answer> rate 570/570 = 100%
+
+--- StrategyQA ---
+  16/687 | acc 68.8%
+  176/687 | acc 80.1%
+  336/687 | acc 78.3%
+  496/687 | acc 79.6%
+  656/687 | acc 79.7%
+StrategyQA: 79.9% | <answer> rate 684/687 = 100%
+
+=======================================================
+RESULTS: pear_sft_epoch1  [think_fewshot]
+=======================================================
+GSM8K      : 86.7%
+MMLU       : 71.4%
+StrategyQA : 79.9%
+Average    : 79.3%
+=======================================================
+
+======================================================================
+[PEAR-SFT, think_zeroshot]
+EVAL_MODE = think_zeroshot
+Loading model: /kaggle/input/models/mahmoodavaram/distilled-qwen-sft-basic/transformers/default/1/pear_sft_epoch1
+
+Loading weights: 100%
+ 339/339 [00:01<00:00, 344.75it/s, Materializing param=model.norm.weight]
+
+Model loaded. eos ids: [151643, 151645]
+
+GSM8K 1319 | StrategyQA 687 | MMLU 570 (stratified)
+
+--- GSM8K ---
+  16/1319 | acc 68.8%
+  176/1319 | acc 83.5%
+  336/1319 | acc 83.0%
+  496/1319 | acc 83.7%
+  656/1319 | acc 82.5%
+  816/1319 | acc 82.6%
+  976/1319 | acc 83.1%
+  1136/1319 | acc 82.5%
+  1296/1319 | acc 82.3%
+GSM8K: 82.2% | <answer> rate 1318/1319 = 100%
+
+--- MMLU ---
+  16/570 | acc 50.0%
+  176/570 | acc 67.0%
+  336/570 | acc 68.8%
+  496/570 | acc 67.1%
+MMLU: 66.5% | <answer> rate 535/570 = 94%
+
+--- StrategyQA ---
+  16/687 | acc 56.2%
+  176/687 | acc 65.3%
+  336/687 | acc 65.8%
+  496/687 | acc 69.0%
+  656/687 | acc 69.2%
+StrategyQA: 69.4% | <answer> rate 673/687 = 98%
+
+=======================================================
+RESULTS: pear_sft_epoch1  [think_zeroshot]
+=======================================================
+GSM8K      : 82.2%
+MMLU       : 66.5%
+StrategyQA : 69.4%
+Average    : 72.7%
+=======================================================

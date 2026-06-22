@@ -1,0 +1,18 @@
+# Core training / eval stack (Layers 1-4). Tested on Python 3.12, CUDA 12.8.
+torch>=2.4
+transformers>=4.45
+datasets>=2.20
+accelerate>=0.34
+bitsandbytes>=0.43          # AdamW8bit optimizer for SFT + GRPO
+peft>=0.13                  # VersaPRM LoRA merge (commonsense PRM)
+vllm>=0.6                   # fast pass@8 rollouts for the difficulty pool builder
+numpy>=1.26
+# Figures / paper (CPU-only, no GPU needed)
+matplotlib>=3.8
+python-docx>=1.1
+# Quantization (Layer 5) additionally needs llama.cpp built from source and:
+gguf>=0.10
+sentencepiece>=0.2
+protobuf>=4.25
+# Official harness numbers (optional): lm-eval (EleutherAI)
+# pip install lm-eval

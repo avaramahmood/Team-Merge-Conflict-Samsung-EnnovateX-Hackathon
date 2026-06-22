@@ -1,0 +1,39 @@
+Packages installed.
+
+======================================================================
+CONCISENESS GRPO | 2026-06-15 09:36 | init=/kaggle/input/models/avaramsalim/failed-grpo/transformers/default/4/grpo_best
+======================================================================
+
+Loading policy from /kaggle/input/models/avaramsalim/failed-grpo/transformers/default/4/grpo_best ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading frozen ref (= grpo_best, anchor KL to the GRPO optimum) ...
+[pool] math: 1000 active rows (fresh, no inherited retires)
+[pool] sqa: 1500 active rows (fresh, no inherited retires)
+
+======================================================================
+CONCISENESS GRPO | iters<= 24 (cap), budget 5000s | prompts/iter=64 G=8 | plain-GRPO(all-8) both domains | reward: wrong=-1, correct=exp(-0.6*L/budget) {'math': 512, 'sqa': 256} | adv=r-groupmean (no std) | eps=[0.2,0.28] KL=0.01 LR=3e-06 clip=0.5 | mix={'sqa': 0.6, 'math': 0.4} | retire: 8/8=OFF, 0/8x2
+======================================================================
+iter   1/24 | pass sqa=0.635 math=0.841 | len sqa= 426 math= 553 | surv=63 buf=504 | pg=+0.0000 kl=0.0008 gn=2.20 | ret=0 | gpu=61.2GB | 7.3m (tot 7.3m)
+iter   2/24 | pass sqa=0.641 math=0.904 | len sqa= 426 math= 562 | surv=64 buf=512 | pg=-0.0000 kl=0.0011 gn=3.34 | ret=0 | gpu=61.2GB | 7.3m (tot 14.7m)
+iter   3/24 | pass sqa=0.674 math=0.885 | len sqa= 427 math= 544 | surv=64 buf=512 | pg=-0.0001 kl=0.0014 gn=1.30 | ret=0 | gpu=61.2GB | 7.4m (tot 22.0m)
+iter   4/24 | pass sqa=0.641 math=0.803 | len sqa= 418 math= 557 | surv=64 buf=512 | pg=-0.0001 kl=0.0018 gn=3.50 | ret=0 | gpu=61.2GB | 7.3m (tot 29.4m)
+iter   5/24 | pass sqa=0.704 math=0.942 | len sqa= 450 math= 538 | surv=64 buf=512 | pg=+0.0000 kl=0.0111 gn=0.66 | ret=0 | gpu=61.2GB | 7.3m (tot 36.6m)
+iter   6/24 | pass sqa=0.757 math=0.851 | len sqa= 426 math= 581 | surv=63 buf=504 | pg=+0.0000 kl=0.0029 gn=1.91 | ret=0 | gpu=61.2GB | 7.4m (tot 44.0m)
+iter   7/24 | pass sqa=0.763 math=0.861 | len sqa= 409 math= 532 | surv=62 buf=496 | pg=-0.0001 kl=0.0034 gn=3.16 | ret=0 | gpu=61.2GB | 7.3m (tot 51.3m)
+iter   8/24 | pass sqa=0.753 math=0.928 | len sqa= 431 math= 549 | surv=64 buf=512 | pg=-0.0001 kl=0.0042 gn=3.17 | ret=0 | gpu=61.2GB | 7.3m (tot 58.6m)
+iter   9/24 | pass sqa=0.720 math=0.899 | len sqa= 439 math= 549 | surv=63 buf=504 | pg=-0.0000 kl=0.0052 gn=0.97 | ret=0 | gpu=61.2GB | 7.3m (tot 65.9m)
+iter  10/24 | pass sqa=0.724 math=0.841 | len sqa= 397 math= 570 | surv=62 buf=496 | pg=+0.0001 kl=0.0063 gn=3.36 | ret=0 | gpu=61.2GB | 7.2m (tot 73.1m)
+iter  11/24 | pass sqa=0.730 math=0.851 | len sqa= 415 math= 527 | surv=64 buf=512 | pg=-0.0000 kl=0.0081 gn=3.64 | ret=0 | gpu=61.2GB | 7.4m (tot 80.5m)
+iter  12/24 | pass sqa=0.605 math=0.894 | len sqa= 382 math= 510 | surv=63 buf=504 | pg=-0.0001 kl=0.0101 gn=2.03 | ret=0 | gpu=61.2GB | 7.3m (tot 87.8m)
+
+[session] 5000s budget reached at iter 12/24; stopping cleanly. Checkpoint saved below.
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]  ✓ checkpoint -> /kaggle/working/grpo_concise_best
+
+======================================================================
+CONCISENESS PASS DONE.
+  iterations run : 12/24
+  model          : /kaggle/working/grpo_concise_best
+  NO eval ran in-session. Eval separately with eval_unified_v5 against
+  grpo_concise_best, watching accuracy (held) + mean length (down).
+  Next: feed grpo_concise_best into quantization (QAT + UD-Q4_K_XL).
+======================================================================

@@ -1,0 +1,44 @@
+EVAL_MODE = think_fewshot
+Loading model: /kaggle/input/models/mahmoodavaram/grpo-reward-shaping-ckpt/transformers/default/2/grpo_best
+
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Model loaded. eos ids: [151643, 151645]
+
+GSM8K 1319 | StrategyQA 687 | MMLU 570 (stratified)
+
+--- GSM8K ---
+  16/1319 | acc 75.0%
+  176/1319 | acc 87.5%
+  336/1319 | acc 88.7%
+  496/1319 | acc 87.3%
+  656/1319 | acc 86.1%
+  816/1319 | acc 85.8%
+  976/1319 | acc 86.5%
+  1136/1319 | acc 85.7%
+  1296/1319 | acc 85.7%
+GSM8K: 85.7% | <answer> rate 1309/1319 = 99%
+
+--- MMLU ---
+  16/570 | acc 37.5%
+  176/570 | acc 65.3%
+  336/570 | acc 69.9%
+  496/570 | acc 71.2%
+MMLU: 71.2% | <answer> rate 570/570 = 100%
+
+--- StrategyQA ---
+  16/687 | acc 68.8%
+  176/687 | acc 75.6%
+  336/687 | acc 75.0%
+  496/687 | acc 76.6%
+  656/687 | acc 76.8%
+StrategyQA: 77.3% | <answer> rate 683/687 = 99%
+
+=======================================================
+RESULTS: grpo_best  [think_fewshot]
+=======================================================
+GSM8K      : 85.7%
+MMLU       : 71.2%
+StrategyQA : 77.3%
+Average    : 78.1%
+=======================================================

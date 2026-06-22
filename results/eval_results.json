@@ -1,0 +1,53 @@
+{
+  "_comment": "Consolidated held-out benchmark results transcribed from final.ipynb. GSM8K = full test (1319), StrategyQA = full test (687), MMLU = stratified 570-item sample (seed 42, 10/subject). Greedy decoding (do_sample=False). Base model evaluated in its native base_fewshot format; all think/answer checkpoints in their native chat format (think_fewshot is the primary native format; think_zeroshot reported for the SFT launch point).",
+  "protocol": {
+    "decoding": "greedy (do_sample=False, no repetition penalty)",
+    "gsm8k": "full test, 1319 items, 8-shot CoT (base) / native think-answer (trained)",
+    "mmlu": "stratified 570-item sample, seed=42, 10 per subject",
+    "strategyqa": "full test, 687 items",
+    "citations": {
+      "gsm8k": "Cobbe et al. 2021, arXiv:2110.14168",
+      "mmlu": "Hendrycks et al. 2021, arXiv:2009.03300",
+      "strategyqa": "Geva et al. 2021, arXiv:2101.02235",
+      "harness": "Gao et al. 2023, zenodo 10256836"
+    }
+  },
+  "results": [
+    {"stage": "L0 base", "model": "Qwen2.5-7B", "eval_mode": "base_fewshot",
+     "gsm8k": 82.9, "mmlu": 72.8, "strategyqa": 77.9, "average": 77.9},
+    {"stage": "L1 PEAR-SFT", "model": "pear_sft_epoch1", "eval_mode": "think_fewshot",
+     "gsm8k": 86.7, "mmlu": 71.4, "strategyqa": 79.9, "average": 79.3,
+     "answer_tag_rate": {"gsm8k": 1.00, "mmlu": 1.00, "strategyqa": 1.00}},
+    {"stage": "L1 PEAR-SFT", "model": "pear_sft_epoch1", "eval_mode": "think_zeroshot",
+     "gsm8k": 82.2, "mmlu": 66.5, "strategyqa": 69.4, "average": 72.7,
+     "answer_tag_rate": {"gsm8k": 1.00, "mmlu": 0.94, "strategyqa": 0.98}},
+    {"stage": "L2-3 GRPO (v8-A PRM-shaping)", "model": "grpo_best", "eval_mode": "think_fewshot",
+     "gsm8k": 85.7, "mmlu": 71.2, "strategyqa": 77.3, "average": 78.1},
+    {"stage": "L2-3 GRPO (v8-C PRM-select, collapsed)", "model": "grpo_best", "eval_mode": "think_fewshot",
+     "gsm8k": 85.8, "mmlu": 70.9, "strategyqa": 75.1, "average": 77.3},
+    {"stage": "L2-3 GRPO (v8-B anti-guess, SELECTED)", "model": "grpo_best", "eval_mode": "think_fewshot",
+     "gsm8k": 88.3, "mmlu": 69.8, "strategyqa": 79.8, "average": 79.3,
+     "answer_tag_rate": {"gsm8k": 1.00, "mmlu": 1.00, "strategyqa": 1.00}}
+  ],
+  "final_model": {
+    "name": "concise-Q4_K_XL.gguf (UD-Q4_K_XL, 5.09 GB)",
+    "lineage": "Qwen2.5-7B -> PEAR-SFT -> anti-guess PROF-GRPO -> conditional-conciseness GRPO -> QAT 4-bit",
+    "quant_fidelity_vs_bf16": {
+      "mean_ppl_ratio": 1.0128,
+      "mean_kl_divergence": 0.00805,
+      "median_kl_divergence": 0.000168,
+      "same_top1_token_rate": 0.9779,
+      "rms_delta_p": 0.0392
+    },
+    "note": "Conciseness pass cut mean correct-trace length by ~8-10% with pool accuracy held; quantization KL (0.008) is below the 0.01 accept threshold, so held-out accuracy is within ~1pp of the bf16 GRPO model."
+  },
+  "kpi_assessment": {
+    "min_targets": {"gsm8k": ">=50 (PASS, 88.3)", "mmlu": ">=45 (PASS, 69.8)", "strategyqa": ">=65 (PASS, 79.8)"},
+    "improvement_targets_+5pp": {
+      "gsm8k": "+5.4 (PASS: 82.9 -> 88.3)",
+      "strategyqa": "+1.9 (short of +5 by ~3.1 pp: 77.9 -> 79.8)",
+      "mmlu": "-3.0 (held / no gain; not a training target)"
+    },
+    "verdict": "All three minimum thresholds cleared with large margins. The >=+5pp improvement bar is met decisively on GSM8K; StrategyQA improves but falls ~3 pp short of the +5pp stretch target (see reward-hacking analysis in docs/methods-and-observations.md)."
+  }
+}

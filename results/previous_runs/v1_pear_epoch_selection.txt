@@ -1,0 +1,143 @@
+PRIOR RUN v1 (workinprogress.ipynb): PEAR checkpoint selection for RL
+Source: workinprogress.ipynb cells 3, 4, 18
+======================================================================
+
+[PURPOSE]
+# PEAR Checkpoint Evaluation — Which Epoch for PROF-GRPO?
+
+**Purpose:** Evaluate 3 PEAR SFT checkpoints (epochs 1, 2, 3) and select the best  
+*RL initialization* for PROF-GRPO, based on 5 proxy metrics measured over 50 rollout steps.
+
+> **Key insight (PEAR paper §2):** Better offline SFT ≠ better post-RL performance.  
+> The goal is an initialization that *facilitates* downstream RL.
+
+### Metrics
+| # | Metric | Ideal |
+|---|--------|-------|
+| M1 | GRPO proxy loss (50-step mini-GRPO) | stable, low-positive |
+| M2 | Reward signal quality — correct fraction across rollouts | 0.30–0.70 ("Goldilocks") |
+| M3 | PEAR token-weight entropy | higher = healthier spread |
+| M4 | Forward KL to base model | moderate (1e-5 – 5e-4) |
+
+**TOO-FEW-CORRECT fallback (new):** If a checkpoint's sampling correct-fraction  
+drops below 0.15, a greedy-decoding probe distinguishes a truly broken model from  
+a high-entropy one that could still respond to GRPO exploration.
+
+======================================================================
+[SELECTION LOG]
+[20:35:04] ======================================================================
+[20:35:04]   PEAR CHECKPOINT EVALUATION — RL Readiness for PROF-GRPO
+[20:35:04] ======================================================================
+[20:35:04]   Epoch 1: /kaggle/input/models/mahmoodavaram/qwen-pear-sft-epoch-1/transformers/default/1/pear_sft_best ✓
+[20:35:04]   Epoch 2: /kaggle/input/models/mahmoodavaram/pear-sft-qwen-epoch-2/transformers/default/1/pear_sft_epoch2 ✓
+[20:35:04]   Epoch 3: /kaggle/input/models/avaramsalim/pear-sft-qwen-epoch-3/transformers/default/1/pear_sft_epoch3 ✓
+[20:35:05] Loaded grpo_filtered_300: 300 questions
+[20:35:05] Using 50 eval questions
+[20:35:05]   Source breakdown: {'gsm8k': 43, 'openmath': 7}
+[20:35:05] 
+Loading base model (CPU, float32 for stability)...
+`torch_dtype` is deprecated! Use `dtype` instead!
+[20:35:22] 
+============================================================
+[20:35:22] EVALUATING: Epoch 1  |  /kaggle/input/models/mahmoodavaram/qwen-pear-sft-epoch-1/transformers/default/1/pear_sft_best
+[20:35:22] ============================================================
+[20:35:22] Loading eval model onto GPU...
+[20:36:47] Computing KL divergence to base model...
+[20:37:26]   KL(base || ckpt): 0.07845
+[20:38:22]   step   1/50 | corr: 2/4 | loss: 7697.5298 | mean_loss: 7697.5298 | 56.8s
+[20:44:26]   step  11/50 | corr: 4/4 | loss: skipped (zero variance) | 29.0s
+[20:51:59]   step  21/50 | corr: 4/4 | loss: skipped (zero variance) | 29.1s
+[20:59:00]   step  31/50 | corr: 4/4 | loss: skipped (zero variance) | 29.1s
+[21:04:43]   step  41/50 | corr: 1/4 | loss: 0.8145 | mean_loss: 34042844263.8921 | 57.3s
+[21:10:45] 
+  === Epoch 1 Summary ===
+[21:10:45]   GRPO proxy loss:    27860076409.6344 ± 127399542089.3601
+[21:10:45]   Correct fraction:   0.760 ± 0.300
+[21:10:45]   Weight entropy:     5.8765
+[21:10:45]   KL to base:         0.07845
+[21:10:45]   GPU freed. Mem after: 15.2 GB
+[21:10:45] 
+  RL-readiness score: 0.3858
+[21:10:45]   Breakdown: {'m1_loss': 0.2, 'm2_corr': 0.42955735821073915, 'm3_entropy': 0.9794083728390741, 'm4_kl': 0.2}
+[21:10:45]   Partial results saved: /kaggle/working/eval_epoch1_partial.json
+[21:10:45] 
+============================================================
+[21:10:45] EVALUATING: Epoch 2  |  /kaggle/input/models/mahmoodavaram/pear-sft-qwen-epoch-2/transformers/default/1/pear_sft_epoch2
+[21:10:45] ============================================================
+[21:10:45] Loading eval model onto GPU...
+[21:12:13] Computing KL divergence to base model...
+[21:12:52]   KL(base || ckpt): 0.12136
+[21:13:21]   step   1/50 | corr: 4/4 | loss: skipped (zero variance) | 29.1s
+[21:19:13]   step  11/50 | corr: 4/4 | loss: skipped (zero variance) | 29.0s
+[21:26:16]   step  21/50 | corr: 4/4 | loss: skipped (zero variance) | 29.1s
+[21:31:56]   step  31/50 | corr: 4/4 | loss: skipped (zero variance) | 29.1s
+[21:38:34]   step  41/50 | corr: 1/4 | loss: 2077.2786 | mean_loss: 9098705.5412 | 58.2s
+[21:44:14] 
+  === Epoch 2 Summary ===
+[21:44:14]   GRPO proxy loss:    50228788.8493 ± 170038542.9657
+[21:44:14]   Correct fraction:   0.795 ± 0.311
+[21:44:14]   Weight entropy:     5.6130
+[21:44:14]   KL to base:         0.12136
+[21:44:14]   GPU freed. Mem after: 15.2 GB
+[21:44:14] 
+  RL-readiness score: 0.3514
+[21:44:14]   Breakdown: {'m1_loss': 0.2, 'm2_corr': 0.33695277229782516, 'm3_entropy': 0.9354948295222444, 'm4_kl': 0.2}
+[21:44:14]   Partial results saved: /kaggle/working/eval_epoch2_partial.json
+[21:44:14] 
+============================================================
+[21:44:14] EVALUATING: Epoch 3  |  /kaggle/input/models/avaramsalim/pear-sft-qwen-epoch-3/transformers/default/1/pear_sft_epoch3
+[21:44:14] ============================================================
+[21:44:14] Loading eval model onto GPU...
+[21:45:59] Computing KL divergence to base model...
+[21:46:37]   KL(base || ckpt): 0.14734
+[21:47:34]   step   1/50 | corr: 3/4 | loss: 25162234.0000 | mean_loss: 25162234.0000 | 56.7s
+[21:53:16]   step  11/50 | corr: 4/4 | loss: skipped (zero variance) | 29.0s
+[21:59:24]   step  21/50 | corr: 4/4 | loss: skipped (zero variance) | 29.1s
+[22:05:06]   step  31/50 | corr: 4/4 | loss: skipped (zero variance) | 29.1s
+[22:11:40]   step  41/50 | corr: 1/4 | loss: 4.0113 | mean_loss: 9706661.7501 | 59.2s
+[22:17:48] 
+  === Epoch 3 Summary ===
+[22:17:48]   GRPO proxy loss:    3834188972.8511 ± 14739757663.4035
+[22:17:48]   Correct fraction:   0.835 ± 0.272
+[22:17:48]   Weight entropy:     5.5698
+[22:17:48]   KL to base:         0.14734
+[22:17:48]   GPU freed. Mem after: 15.2 GB
+[22:17:48] 
+  RL-readiness score: 0.3230
+[22:17:48]   Breakdown: {'m1_loss': 0.2, 'm2_corr': 0.24590438437706783, 'm3_entropy': 0.9283067989374332, 'm4_kl': 0.2}
+[22:17:48]   Partial results saved: /kaggle/working/eval_epoch3_partial.json
+[22:17:49] 
+======================================================================
+[22:17:49]   RESULTS — RL READINESS RANKING
+[22:17:49] ======================================================================
+[22:17:49] Rank  Epoch    Score    GRPO Loss    Corr Frac    Greedy CF   KL           Entropy   
+[22:17:49] ----------------------------------------------------------------------
+[22:17:49] 1     1        0.3858   27860076409.6344 0.760        —           0.07845      5.8765     ← WINNER
+[22:17:49] 2     2        0.3514   50228788.8493 0.795        —           0.12136      5.6130    
+[22:17:49] 3     3        0.3230   3834188972.8511 0.835        —           0.14734      5.5698    
+[22:17:49] 
+======================================================================
+[22:17:49]   RECOMMENDED CHECKPOINT: Epoch 1
+[22:17:49]   Path: /kaggle/input/models/mahmoodavaram/qwen-pear-sft-epoch-1/transformers/default/1/pear_sft_best
+[22:17:49]   RL-Readiness Score: 0.3858
+[22:17:49] 
+  WHY THIS CHECKPOINT:
+[22:17:49]   • GRPO proxy loss component:  0.200/1.0
+[22:17:49]   • Correct fraction component: 0.430/1.0
+[22:17:49]   • PEAR weight entropy:        0.979/1.0
+[22:17:49]   • KL divergence from base:    0.200/1.0
+[22:17:49] ======================================================================
+[22:17:49] 
+  INTERPRETATION GUIDE
+[22:17:49] ----------------------------------------------------------------------
+[22:17:49] 
+  Epoch 1: ⚠ HIGH LOSS — possibly underfitted or diverged | ⚠ KL TOO LARGE — model may have drifted too far
+[22:17:49] 
+  Epoch 2: ⚠ HIGH LOSS — possibly underfitted or diverged | ⚠ KL TOO LARGE — model may have drifted too far
+[22:17:49] 
+  Epoch 3: ⚠ HIGH LOSS — possibly underfitted or diverged | ⚠ KL TOO LARGE — model may have drifted too far
+[22:17:49] 
+[22:17:49] Full results saved: /kaggle/working/pear_eval_results.json
+[22:17:49] Best checkpoint meta saved: /kaggle/working/best_ckpt_meta.json
+[22:17:49] 
+Next step: set PEAR_CKPT = "/kaggle/input/models/mahmoodavaram/qwen-pear-sft-epoch-1/transformers/default/1/pear_sft_best" in notebook3_prof_grpo_fixed.py

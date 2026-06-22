@@ -1,0 +1,45 @@
+EVAL_MODE = think_zeroshot
+Loading model: /kaggle/input/models/mahmoodavaram/distilled-qwen-sft-basic/transformers/default/1/pear_sft_epoch1
+
+Loading weights: 100%
+ 339/339 [00:01<00:00, 344.75it/s, Materializing param=model.norm.weight]
+
+Model loaded. eos ids: [151643, 151645]
+
+GSM8K 1319 | StrategyQA 687 | MMLU 570 (stratified)
+
+--- GSM8K ---
+  16/1319 | acc 68.8%
+  176/1319 | acc 83.5%
+  336/1319 | acc 83.0%
+  496/1319 | acc 83.7%
+  656/1319 | acc 82.5%
+  816/1319 | acc 82.6%
+  976/1319 | acc 83.1%
+  1136/1319 | acc 82.5%
+  1296/1319 | acc 82.3%
+GSM8K: 82.2% | <answer> rate 1318/1319 = 100%
+
+--- MMLU ---
+  16/570 | acc 50.0%
+  176/570 | acc 67.0%
+  336/570 | acc 68.8%
+  496/570 | acc 67.1%
+MMLU: 66.5% | <answer> rate 535/570 = 94%
+
+--- StrategyQA ---
+  16/687 | acc 56.2%
+  176/687 | acc 65.3%
+  336/687 | acc 65.8%
+  496/687 | acc 69.0%
+  656/687 | acc 69.2%
+StrategyQA: 69.4% | <answer> rate 673/687 = 98%
+
+=======================================================
+RESULTS: pear_sft_epoch1  [think_zeroshot]
+=======================================================
+GSM8K      : 82.2%
+MMLU       : 66.5%
+StrategyQA : 69.4%
+Average    : 72.7%
+=======================================================

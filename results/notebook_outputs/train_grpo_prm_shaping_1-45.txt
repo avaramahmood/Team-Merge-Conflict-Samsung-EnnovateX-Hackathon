@@ -1,0 +1,89 @@
+Packages installed.
+
+======================================================================
+GRPO v7  |  session 2026-06-14 01:24  |  resume=None  |  start_iter=1/90
+======================================================================
+
+Loading policy from /kaggle/input/models/mahmoodavaram/distilled-qwen-sft-basic/transformers/default/1/pear_sft_epoch1 ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading frozen ref (pear_sft_epoch1) on GPU ...
+
+Loading Qwen Math PRM from /kaggle/input/models/mahmoodavaram/qwen2-5-math-prm-7b/transformers/default/1/qwen2.5-math-prm-7b ...
+Key                 | Status     |  | 
+--------------------+------------+--+-
+lm_head.weight      | UNEXPECTED |  | 
+score.{0, 2}.bias   | UNEXPECTED |  | 
+score.{0, 2}.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  Qwen PRM ready (hidden=3584, inter=3584).
+Qwen PRM gap: good=0.916 bad=0.226 -> +0.689
+
+Loading VersaPRM: base=/kaggle/input/models/avaramsalim/versa-prm/transformers/default/1/Llama-PRM800K + lora=/kaggle/input/models/avaramsalim/versa-prm/transformers/default/1/VersaPRM
+  step_id=23535 plus_id=10 minus_id=12
+  VersaPRM validation (plus_first=True): good=0.979 bad=0.187 gap=+0.792
+[pool] math: 1000 active rows
+[pool] sqa: 1500 active rows
+
+======================================================================
+GRPO v7 | start_iter=1/90 | prompts/iter=64 G=8 | sqa=PRM-shaping(β=0.5) math=PROF(m=4) | adv=r-groupmean (no std) | eps=[0.2,0.28] KLm=0.005 KLs=0.005 LR=8e-06 clip=0.5 | mix={'sqa': 0.6, 'math': 0.4} sqa_roll=decomp | retire 8/8 + 0/8x2
+======================================================================
+iter   1/90 | pass sqa=0.566 math=0.567 | surv=57 buf=356 | pg=+0.0299 kl=0.0207 gn=7.06 |adv|=0.84 | ret=5 | gpu=61.2GB | 18.4m (tot 18.4m)
+iter   2/90 | pass sqa=0.595 math=0.678 | surv=51 buf=328 | pg=+0.0400 kl=0.9993 gn=4.19 |adv|=0.83 | ret=15 | gpu=61.2GB | 18.0m (tot 36.4m)
+iter   3/90 | pass sqa=0.645 math=0.678 | surv=58 buf=376 | pg=+0.0503 kl=0.1056 gn=5.38 |adv|=0.79 | ret=21 | gpu=61.2GB | 16.7m (tot 53.1m)
+iter   4/90 | pass sqa=0.582 math=0.635 | surv=50 buf=312 | pg=+0.0297 kl=0.0748 gn=15.44 |adv|=0.81 | ret=32 | gpu=61.2GB | 13.9m (tot 66.9m)
+iter   5/90 | pass sqa=0.632 math=0.745 | surv=51 buf=328 | pg=+0.0499 kl=0.7254 gn=6.84 |adv|=0.81 | ret=44 | gpu=61.2GB | 15.3m (tot 82.2m)
+iter   6/90 | pass sqa=0.589 math=0.798 | surv=49 buf=332 | pg=+0.0501 kl=0.2665 gn=2.47 |adv|=0.77 | ret=59 | gpu=61.2GB | 17.9m (tot 100.1m)
+iter   7/90 | pass sqa=0.628 math=0.750 | surv=48 buf=320 | pg=+0.0351 kl=0.4342 gn=14.38 |adv|=0.81 | ret=73 | gpu=61.2GB | 17.4m (tot 117.5m)
+iter   8/90 | pass sqa=0.569 math=0.812 | surv=45 buf=300 | pg=+0.0390 kl=0.1011 gn=6.31 |adv|=0.74 | ret=90 | gpu=61.2GB | 18.0m (tot 135.6m)
+iter   9/90 | pass sqa=0.533 math=0.649 | surv=48 buf=312 | pg=+0.0263 kl=0.6161 gn=5.47 |adv|=0.81 | ret=103 | gpu=61.2GB | 18.0m (tot 153.6m)
+iter  10/90 | pass sqa=0.569 math=0.764 | surv=48 buf=312 | pg=+0.0258 kl=0.1421 gn=10.75 |adv|=0.75 | ret=118 | gpu=61.2GB | 18.0m (tot 171.5m)
+iter  11/90 | pass sqa=0.582 math=0.817 | surv=43 buf=296 | pg=+0.0374 kl=0.7252 gn=11.00 |adv|=0.76 | ret=137 | gpu=61.2GB | 17.8m (tot 189.3m)
+iter  12/90 | pass sqa=0.589 math=0.764 | surv=48 buf=308 | pg=+0.0518 kl=0.1258 gn=2.70 |adv|=0.77 | ret=150 | gpu=61.2GB | 18.1m (tot 207.5m)
+iter  13/90 | pass sqa=0.595 math=0.779 | surv=48 buf=316 | pg=+0.0404 kl=0.2090 gn=18.62 |adv|=0.79 | ret=163 | gpu=61.2GB | 16.4m (tot 223.8m)
+iter  14/90 | pass sqa=0.641 math=0.745 | surv=48 buf=316 | pg=+0.0259 kl=0.2162 gn=3.22 |adv|=0.78 | ret=178 | gpu=61.2GB | 18.1m (tot 242.0m)
+iter  15/90 | pass sqa=0.648 math=0.625 | surv=50 buf=320 | pg=+0.0216 kl=0.1148 gn=3.11 |adv|=0.81 | ret=190 | gpu=61.2GB | 15.7m (tot 257.6m)
+iter  16/90 | pass sqa=0.592 math=0.731 | surv=46 buf=304 | pg=+0.0555 kl=0.1854 gn=1.19 |adv|=0.80 | ret=205 | gpu=61.2GB | 14.3m (tot 271.9m)
+iter  17/90 | pass sqa=0.572 math=0.769 | surv=52 buf=340 | pg=+0.0630 kl=0.8592 gn=5.16 |adv|=0.80 | ret=215 | gpu=61.2GB | 15.5m (tot 287.5m)
+iter  18/90 | pass sqa=0.618 math=0.764 | surv=42 buf=280 | pg=+0.0165 kl=0.1508 gn=4.31 |adv|=0.77 | ret=233 | gpu=61.2GB | 13.0m (tot 300.4m)
+iter  19/90 | pass sqa=0.533 math=0.817 | surv=41 buf=268 | pg=+0.0705 kl=0.2782 gn=8.56 |adv|=0.75 | ret=251 | gpu=61.2GB | 14.7m (tot 315.1m)
+iter  20/90 | pass sqa=0.536 math=0.726 | surv=50 buf=332 | pg=+0.0241 kl=0.1909 gn=4.06 |adv|=0.77 | ret=264 | gpu=61.2GB | 16.5m (tot 331.6m)
+iter  21/90 | pass sqa=0.648 math=0.822 | surv=43 buf=280 | pg=+0.0707 kl=0.1707 gn=7.78 |adv|=0.83 | ret=284 | gpu=61.2GB | 17.6m (tot 349.2m)
+iter  22/90 | pass sqa=0.645 math=0.721 | surv=47 buf=312 | pg=+0.0156 kl=0.2233 gn=5.00 |adv|=0.75 | ret=299 | gpu=61.2GB | 16.6m (tot 365.8m)
+iter  23/90 | pass sqa=0.668 math=0.788 | surv=42 buf=272 | pg=+0.0323 kl=0.2753 gn=2.02 |adv|=0.74 | ret=319 | gpu=61.2GB | 11.4m (tot 377.2m)
+iter  24/90 | pass sqa=0.615 math=0.837 | surv=47 buf=316 | pg=+0.0529 kl=0.5096 gn=19.25 |adv|=0.74 | ret=335 | gpu=61.2GB | 11.7m (tot 388.9m)
+iter  25/90 | pass sqa=0.625 math=0.851 | surv=38 buf=264 | pg=+0.0312 kl=0.3704 gn=9.31 |adv|=0.78 | ret=357 | gpu=61.2GB | 11.3m (tot 400.2m)
+iter  26/90 | pass sqa=0.569 math=0.841 | surv=41 buf=276 | pg=+0.0300 kl=0.2469 gn=4.69 |adv|=0.77 | ret=377 | gpu=61.2GB | 10.6m (tot 410.8m)
+iter  27/90 | pass sqa=0.681 math=0.832 | surv=43 buf=296 | pg=+0.0274 kl=262.9366 gn=8.69 |adv|=0.78 | ret=398 | gpu=61.2GB | 14.8m (tot 425.6m)
+iter  28/90 | pass sqa=0.609 math=0.817 | surv=35 buf=232 | pg=+0.0470 kl=0.2683 gn=9.62 |adv|=0.76 | ret=423 | gpu=61.2GB | 12.3m (tot 437.9m)
+iter  29/90 | pass sqa=0.618 math=0.837 | surv=41 buf=284 | pg=+0.0103 kl=0.2576 gn=2.44 |adv|=0.72 | ret=445 | gpu=61.2GB | 12.0m (tot 450.0m)
+iter  30/90 | pass sqa=0.615 math=0.769 | surv=41 buf=268 | pg=+0.0420 kl=0.3372 gn=5.25 |adv|=0.69 | ret=464 | gpu=61.2GB | 13.6m (tot 463.6m)
+iter  31/90 | pass sqa=0.645 math=0.736 | surv=41 buf=252 | pg=+0.0574 kl=0.5408 gn=10.88 |adv|=0.77 | ret=483 | gpu=61.2GB | 11.2m (tot 474.8m)
+iter  32/90 | pass sqa=0.664 math=0.678 | surv=48 buf=304 | pg=+0.0398 kl=0.7103 gn=16.75 |adv|=0.72 | ret=497 | gpu=61.2GB | 12.9m (tot 487.7m)
+iter  33/90 | pass sqa=0.645 math=0.803 | surv=42 buf=284 | pg=+0.0293 kl=0.5225 gn=11.75 |adv|=0.75 | ret=518 | gpu=61.2GB | 11.7m (tot 499.4m)
+iter  34/90 | pass sqa=0.599 math=0.808 | surv=42 buf=276 | pg=+0.0330 kl=0.7079 gn=4.31 |adv|=0.74 | ret=537 | gpu=61.2GB | 11.6m (tot 511.1m)
+iter  35/90 | pass sqa=0.668 math=0.861 | surv=43 buf=288 | pg=+0.0492 kl=10.4301 gn=8.19 |adv|=0.76 | ret=558 | gpu=61.2GB | 16.6m (tot 527.7m)
+iter  36/90 | pass sqa=0.727 math=0.673 | surv=45 buf=268 | pg=+0.0627 kl=1.9691 gn=9.81 |adv|=0.78 | ret=576 | gpu=61.2GB | 14.2m (tot 541.9m)
+iter  37/90 | pass sqa=0.579 math=0.707 | surv=48 buf=312 | pg=+0.0461 kl=3.4166 gn=12.06 |adv|=0.75 | ret=588 | gpu=61.2GB | 17.9m (tot 559.8m)
+iter  38/90 | pass sqa=0.612 math=0.635 | surv=48 buf=304 | pg=+0.0486 kl=0.4130 gn=1.65 |adv|=0.76 | ret=599 | gpu=61.2GB | 18.0m (tot 577.7m)
+iter  39/90 | pass sqa=0.727 math=0.630 | surv=37 buf=236 | pg=+0.0231 kl=18.0445 gn=0.82 |adv|=0.77 | ret=621 | gpu=61.2GB | 17.6m (tot 595.3m)
+iter  40/90 | pass sqa=0.651 math=0.668 | surv=39 buf=248 | pg=+0.0137 kl=28.9249 gn=7.53 |adv|=0.78 | ret=644 | gpu=61.2GB | 17.7m (tot 612.9m)
+iter  41/90 | pass sqa=0.651 math=0.688 | surv=35 buf=220 | pg=+0.0330 kl=0.2341 gn=2.58 |adv|=0.76 | ret=668 | gpu=61.2GB | 17.5m (tot 630.4m)
+iter  42/90 | pass sqa=0.625 math=0.721 | surv=41 buf=260 | pg=+0.0418 kl=0.2873 gn=3.81 |adv|=0.84 | ret=688 | gpu=61.2GB | 17.8m (tot 648.1m)
+iter  43/90 | pass sqa=0.704 math=0.712 | surv=41 buf=272 | pg=+0.0165 kl=0.2579 gn=1.34 |adv|=0.78 | ret=709 | gpu=61.2GB | 18.0m (tot 666.2m)
+iter  44/90 | pass sqa=0.609 math=0.760 | surv=37 buf=236 | pg=+0.0617 kl=0.3704 gn=3.84 |adv|=0.76 | ret=732 | gpu=61.2GB | 17.5m (tot 683.7m)
+iter  45/90 | pass sqa=0.753 math=0.673 | surv=38 buf=228 | pg=+0.0283 kl=1063.5131 gn=5.34 |adv|=0.81 | ret=756 | gpu=61.2GB | 17.3m (tot 701.0m)
+
+[session] 41500s wall-clock budget reached at iter 45/90; stopping cleanly. Checkpoint + progress + logs are saved below; resume next session.
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]  ✓ latest checkpoint (weights only) -> /kaggle/working/grpo_best
+
+======================================================================
+SESSION DONE.
+  last scores : None
+  baseline    : None
+  iterations  : 45/90
+  Save Version. To continue: attach output as input dataset, set
+  RESUME_FROM to its root (contains grpo_best/ + grpo_progress.json).
+  Final model for eval_unified_v5: /kaggle/working/grpo_best
+======================================================================

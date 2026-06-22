@@ -1,0 +1,25 @@
+bitsandbytes installed from wheel.
+Logging to: /kaggle/working/logs/run_20260607_211923
+Loading base model for SFT...
+Train: 6023 | Val: 316 | mode=uniform | neg=False
+Using AdamW8bit.
+Rows: 6023 | Batches/epoch: 377 | Optimizer steps: 188 | Warmup: 9
+Starting PEAR SFT (1 epoch)...
+
+
+============================================================
+EPOCH 1/1
+============================================================
+  [ep 1] step 1/188 | loss: 1.0383 | pos: 1.0383 | neg: 0.0000 | lr: 1.11e-06 | grad: 16.50 | tok/s: 2241 | gpu: 34.1GB | cum_pos: 32 | cum_neg: 0
+  [ep 1] step 50/188 | loss: 0.5537 | pos: 0.5537 | neg: 0.0000 | lr: 7.71e-06 | grad: 2.58 | tok/s: 2747 | gpu: 33.4GB | cum_pos: 1600 | cum_neg: 0
+  [ep 1] step 100/188 | loss: 0.5091 | pos: 0.5091 | neg: 0.0000 | lr: 4.92e-06 | grad: 2.38 | tok/s: 2325 | gpu: 34.4GB | cum_pos: 3200 | cum_neg: 0
+  [ep 1] step 150/188 | loss: 0.4858 | pos: 0.4858 | neg: 0.0000 | lr: 2.12e-06 | grad: 2.05 | tok/s: 2464 | gpu: 34.9GB | cum_pos: 4800 | cum_neg: 0
+
+Epoch 1 val loss: 0.5520 | time: 16.3 min
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]
+Checkpoint saved: /kaggle/working/pear_sft_epoch1
+Summary saved: /kaggle/working/logs/run_20260607_211923/summary.json
+
+PEAR SFT complete.
+Checkpoint: /kaggle/working/pear_sft_epoch1
+Logs:       /kaggle/working/logs/run_20260607_211923

@@ -1,0 +1,49 @@
+EVAL_MODE = base_fewshot
+Loading model: /kaggle/input/models/mahmoodavaram/qwen2-5-7b/transformers/default/1/qwen2.5-7b
+
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights: 100%
+ 339/339 [04:13<00:00,  1.52it/s, Materializing param=model.norm.weight]
+
+Model loaded. eos ids: [151643]
+
+GSM8K 1319 | StrategyQA 687 | MMLU 570 (stratified)
+
+--- GSM8K ---
+  16/1319 | acc 75.0%
+  176/1319 | acc 81.2%
+  336/1319 | acc 82.7%
+  496/1319 | acc 83.3%
+  656/1319 | acc 82.9%
+  816/1319 | acc 82.4%
+  976/1319 | acc 83.0%
+  1136/1319 | acc 82.4%
+  1296/1319 | acc 82.9%
+GSM8K: 82.9%
+
+--- MMLU ---
+  16/570 | acc 37.5%
+  176/570 | acc 65.9%
+  336/570 | acc 73.5%
+  496/570 | acc 72.6%
+MMLU: 72.8%
+
+--- StrategyQA ---
+  16/687 | acc 62.5%
+  176/687 | acc 80.1%
+  336/687 | acc 77.1%
+  496/687 | acc 78.2%
+  656/687 | acc 77.7%
+StrategyQA: 77.9%
+
+=======================================================
+RESULTS: qwen2.5-7b  [base_fewshot]
+=======================================================
+GSM8K      : 82.9%
+MMLU       : 72.8%
+StrategyQA : 77.9%
+Average    : 77.9%
+=======================================================
+
+Saved: /kaggle/working/eval_results/qwen2.5-7b__base_fewshot.json

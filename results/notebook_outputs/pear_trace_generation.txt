@@ -1,0 +1,83 @@
+Installing 6 wheels (torch/transformers/nvidia excluded):
+  defuser-0.0.22-py3-none-any.whl
+  device_smi-0.5.6-py3-none-any.whl
+  gptqmodel-7.0.0-py3-none-any.whl
+  logbar-0.4.3-py3-none-any.whl
+  pypcre-0.3.2-cp312-cp312-linux_x86_64.whl
+  tokenicer-0.0.13-py3-none-any.whl
+Processing /kaggle/input/datasets/mahmoodavaram/gptqmodel-wheel/defuser-0.0.22-py3-none-any.whl
+Processing /kaggle/input/datasets/mahmoodavaram/gptqmodel-wheel/device_smi-0.5.6-py3-none-any.whl
+Processing /kaggle/input/datasets/mahmoodavaram/gptqmodel-wheel/gptqmodel-7.0.0-py3-none-any.whl
+Processing /kaggle/input/datasets/mahmoodavaram/gptqmodel-wheel/logbar-0.4.3-py3-none-any.whl
+Processing /kaggle/input/datasets/mahmoodavaram/gptqmodel-wheel/pypcre-0.3.2-cp312-cp312-linux_x86_64.whl
+Processing /kaggle/input/datasets/mahmoodavaram/gptqmodel-wheel/tokenicer-0.0.13-py3-none-any.whl
+Installing collected packages: tokenicer, pypcre, logbar, gptqmodel, device-smi, defuser
+Successfully installed defuser-0.0.22 device-smi-0.5.6 gptqmodel-7.0.0 logbar-0.4.3 pypcre-0.3.2 tokenicer-0.0.13
+Teacher resolved to: /kaggle/input/models/konstantinboyko/deepseek-r1-distill-qwen-32b-awq-gemm-128-v01/transformers/default/1
+Loading teacher (pi_beta, 32B AWQ)...
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+WARN  Python GIL is enabled: Multi-gpu quant acceleration for MoE models is sub-optimal and multi-core accelerated cpu packing is also disabled. We recommend Python >= 3.13.3t with Pytorch > 2.8 for mult-gpu quantization and multi-cpu packing with env `PYTHON_GIL=0`.
+INFO  ENV: Auto setting PYTORCH_ALLOC_CONF='expandable_segments:True,max_split_size_mb:256,garbage_collection_threshold:0.7' for memory saving.
+INFO  ENV: Auto setting CUDA_DEVICE_ORDER=PCI_BUS_ID for correctness.          
+fatal: not a git repository (or any parent up to mount point /kaggle)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+INFO  
+
+┌─────────────┐    ┌────────────────────────┐    ┌────────────┐    ┌─────────┐
+│ GPT-QModel  │ -> │ ▓▓▓▓▓▓▓▓▓▓▓▓ 16bit     │ -> │ ▒▒▒▒ 8bit  │ -> │ ░░ 4bit │
+└─────────────┘    └────────────────────────┘    └────────────┘    └─────────┘
+GPT-QModel   : 7.0.0
+Transformers : 5.0.0
+Torch        : 2.10.0+cu128
+Triton       : 3.6.0
+INFO  Kernel: Auto-selection: adding candidate `AwqMarlinLinear`               
+INFO  Kernel: selected -> `AwqMarlinLinear`.                                   
+INFO  Marlin fp16: torch.ops JIT extension ready in 70s (estimated ~117s, -47s).
+INFO  gc.collect() reclaimed 6 objects in 0.253s                               
+Loading target (pi_theta, Qwen2.5-7B base)...
+COMMONSENSE: 3180 rows (all 1590 StrategyQA + 1590 CSQA2)
+
+MATH: 4000 rows (cap=4000)
+Passing `generation_config` together with generation-related arguments=({'max_new_tokens', 'num_return_sequences', 'pad_token_id'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+  1280/4000 pos=53 neg=26 skip=19
+  1440/4000 pos=175 neg=78 skip=56
+  1600/4000 pos=285 neg=123 skip=106
+  1760/4000 pos=405 neg=164 skip=146
+  1920/4000 pos=510 neg=210 skip=200
+  2080/4000 pos=625 neg=237 skip=245
+  2240/4000 pos=742 neg=285 skip=288
+  2400/4000 pos=851 neg=335 skip=339
+  2560/4000 pos=952 neg=381 skip=397
+  2720/4000 pos=1072 neg=429 skip=437
+  2880/4000 pos=1188 neg=490 skip=481
+  3040/4000 pos=1310 neg=539 skip=519
+  3200/4000 pos=1432 neg=589 skip=557
+  3360/4000 pos=1535 neg=642 skip=614
+  3520/4000 pos=1649 neg=689 skip=658
+  3680/4000 pos=1747 neg=729 skip=719
+  3840/4000 pos=1859 neg=781 skip=766
+
+MMLU: 1590 rows (cap=None)
+  0/1590 pos=1960 skip=822
+  160/1590 pos=1999 skip=943
+  320/1590 pos=2032 skip=1070
+  480/1590 pos=2082 skip=1180
+  640/1590 pos=2139 skip=1283
+  800/1590 pos=2188 skip=1394
+  960/1590 pos=2231 skip=1511
+  1120/1590 pos=2271 skip=1631
+  1280/1590 pos=2322 skip=1740
+  1440/1590 pos=2377 skip=1845
+
+=== DONE ===
+{
+  "positive": 2422,
+  "negative": 820,
+  "skipped": 1942,
+  "rationalized": 0,
+  "total": 3242,
+  "neg_to_pos_ratio": 0.339
+}
+
+Traces: /kaggle/working/pear_sft_final.jsonl

@@ -1,0 +1,48 @@
+======================================================================
+GRPO v7 | start_iter=58/90 | prompts/iter=64 G=8 | sqa=PRM-select math=PROF(m=4) | adv=r-groupmean (no std) | eps=[0.2,0.28] KLm=0.005 KLs=0.005 LR=8e-06 clip=0.5 | mix={'sqa': 0.6, 'math': 0.4} sqa_roll=decomp | retire 8/8 + 0/8x2
+======================================================================
+iter  58/90 | pass sqa=0.382 math=0.226 | surv=54 buf=302 | pg=+0.1052 kl=43.3441 gn=6.69 |adv|=0.79 | ret=340 | gpu=61.2GB | 17.5m (tot 17.5m)
+iter  59/90 | pass sqa=0.434 math=0.264 | surv=57 buf=312 | pg=+0.0700 kl=49.5160 gn=29.88 |adv|=0.85 | ret=342 | gpu=61.2GB | 18.1m (tot 35.5m)
+iter  60/90 | pass sqa=0.444 math=0.115 | surv=49 buf=278 | pg=+0.1029 kl=34.7233 gn=22.25 |adv|=0.78 | ret=347 | gpu=61.2GB | 17.4m (tot 52.9m)
+iter  61/90 | pass sqa=0.299 math=0.346 | surv=50 buf=273 | pg=+0.0494 kl=37.5335 gn=27.88 |adv|=0.81 | ret=349 | gpu=61.2GB | 17.6m (tot 70.5m)
+iter  62/90 | pass sqa=0.457 math=0.231 | surv=57 buf=304 | pg=+0.0519 kl=41.8375 gn=4.00 |adv|=0.82 | ret=353 | gpu=61.2GB | 17.8m (tot 88.3m)
+iter  63/90 | pass sqa=0.480 math=0.226 | surv=58 buf=308 | pg=+0.0733 kl=35.1816 gn=16.50 |adv|=0.81 | ret=355 | gpu=61.2GB | 17.9m (tot 106.2m)
+iter  64/90 | pass sqa=0.464 math=0.351 | surv=60 buf=328 | pg=+0.1036 kl=35.1559 gn=16.75 |adv|=0.85 | ret=359 | gpu=61.2GB | 18.7m (tot 124.9m)
+iter  65/90 | pass sqa=0.516 math=0.245 | surv=54 buf=291 | pg=+0.1031 kl=38.5390 gn=54.00 |adv|=0.91 | ret=362 | gpu=61.2GB | 17.8m (tot 142.7m)
+iter  66/90 | pass sqa=0.418 math=0.260 | surv=55 buf=299 | pg=+0.0290 kl=35.7506 gn=13.00 |adv|=0.82 | ret=365 | gpu=61.2GB | 18.3m (tot 160.9m)
+iter  67/90 | pass sqa=0.444 math=0.471 | surv=58 buf=309 | pg=+0.1238 kl=44.6547 gn=15.94 |adv|=0.86 | ret=368 | gpu=61.2GB | 18.1m (tot 179.1m)
+iter  68/90 | pass sqa=0.411 math=0.072 | surv=47 buf=274 | pg=+0.1415 kl=46.4583 gn=12.19 |adv|=0.74 | ret=371 | gpu=61.2GB | 17.4m (tot 196.5m)
+iter  69/90 | pass sqa=0.490 math=0.082 | surv=47 buf=263 | pg=+0.1353 kl=46.5987 gn=2.22 |adv|=0.78 | ret=373 | gpu=61.2GB | 17.6m (tot 214.1m)
+iter  70/90 | pass sqa=0.398 math=0.183 | surv=54 buf=296 | pg=+0.0664 kl=43.8329 gn=7.53 |adv|=0.80 | ret=374 | gpu=61.2GB | 18.2m (tot 232.3m)
+iter  71/90 | pass sqa=0.428 math=0.173 | surv=57 buf=310 | pg=+0.0563 kl=44.7398 gn=15.50 |adv|=0.79 | ret=377 | gpu=61.2GB | 18.4m (tot 250.7m)
+iter  72/90 | pass sqa=0.431 math=0.317 | surv=59 buf=320 | pg=+0.0730 kl=47.9712 gn=5.28 |adv|=0.81 | ret=378 | gpu=61.2GB | 18.4m (tot 269.1m)
+iter  73/90 | pass sqa=0.411 math=0.413 | surv=60 buf=327 | pg=+0.0870 kl=52.5240 gn=51.25 |adv|=0.85 | ret=378 | gpu=61.2GB | 18.4m (tot 287.5m)
+iter  74/90 | pass sqa=0.480 math=0.312 | surv=60 buf=314 | pg=+0.0709 kl=52.6523 gn=2.33 |adv|=0.88 | ret=378 | gpu=61.2GB | 18.6m (tot 306.1m)
+iter  75/90 | pass sqa=0.362 math=0.370 | surv=58 buf=323 | pg=+0.0865 kl=53.4255 gn=19.12 |adv|=0.83 | ret=380 | gpu=61.2GB | 18.6m (tot 324.7m)
+iter  76/90 | pass sqa=0.342 math=0.264 | surv=52 buf=282 | pg=+0.0677 kl=55.3702 gn=19.88 |adv|=0.84 | ret=384 | gpu=61.2GB | 17.6m (tot 342.2m)
+iter  77/90 | pass sqa=0.451 math=0.192 | surv=57 buf=317 | pg=+0.1026 kl=53.4267 gn=7.34 |adv|=0.81 | ret=385 | gpu=61.2GB | 18.2m (tot 360.4m)
+iter  78/90 | pass sqa=0.368 math=0.192 | surv=51 buf=280 | pg=+0.0930 kl=57.3709 gn=5.59 |adv|=0.85 | ret=391 | gpu=61.2GB | 17.9m (tot 378.3m)
+iter  79/90 | pass sqa=0.500 math=0.178 | surv=52 buf=270 | pg=+0.1151 kl=62.7185 gn=16.25 |adv|=0.89 | ret=397 | gpu=61.2GB | 17.8m (tot 396.1m)
+iter  80/90 | pass sqa=0.438 math=0.231 | surv=54 buf=284 | pg=+0.0473 kl=56.3081 gn=14.44 |adv|=0.86 | ret=399 | gpu=61.2GB | 18.1m (tot 414.2m)
+iter  81/90 | pass sqa=0.507 math=0.264 | surv=57 buf=287 | pg=+0.0227 kl=50.7698 gn=15.56 |adv|=0.84 | ret=400 | gpu=61.2GB | 18.3m (tot 432.5m)
+iter  82/90 | pass sqa=0.556 math=0.159 | surv=57 buf=300 | pg=+0.0965 kl=56.5069 gn=16.62 |adv|=0.85 | ret=405 | gpu=61.2GB | 18.1m (tot 450.6m)
+iter  83/90 | pass sqa=0.500 math=0.183 | surv=56 buf=307 | pg=+0.0805 kl=57.6926 gn=8.31 |adv|=0.83 | ret=410 | gpu=61.2GB | 18.1m (tot 468.7m)
+iter  84/90 | pass sqa=0.500 math=0.250 | surv=52 buf=273 | pg=+0.0861 kl=61.1965 gn=27.62 |adv|=0.90 | ret=418 | gpu=61.2GB | 18.0m (tot 486.6m)
+iter  85/90 | pass sqa=0.385 math=0.317 | surv=60 buf=335 | pg=+0.1028 kl=66.5897 gn=3.88 |adv|=0.83 | ret=419 | gpu=61.2GB | 18.4m (tot 505.1m)
+iter  86/90 | pass sqa=0.559 math=0.303 | surv=60 buf=312 | pg=+0.0664 kl=48.0519 gn=11.56 |adv|=0.88 | ret=420 | gpu=61.2GB | 18.4m (tot 523.5m)
+iter  87/90 | pass sqa=0.516 math=0.356 | surv=59 buf=304 | pg=+0.0766 kl=61.5189 gn=20.38 |adv|=0.87 | ret=421 | gpu=61.2GB | 18.3m (tot 541.8m)
+iter  88/90 | pass sqa=0.592 math=0.462 | surv=61 buf=312 | pg=+0.1431 kl=51.8763 gn=107.00 |adv|=0.88 | ret=422 | gpu=61.2GB | 18.5m (tot 560.3m)
+iter  89/90 | pass sqa=0.467 math=0.385 | surv=53 buf=267 | pg=+0.1011 kl=59.9429 gn=14.12 |adv|=0.90 | ret=427 | gpu=61.2GB | 17.5m (tot 577.9m)
+iter  90/90 | pass sqa=0.618 math=0.510 | surv=55 buf=263 | pg=+0.1275 kl=68.3395 gn=29.88 |adv|=0.89 | ret=433 | gpu=61.2GB | 17.7m (tot 595.6m)
+
+  ✓ latest checkpoint (weights only) -> /kaggle/working/grpo_best
+
+======================================================================
+SESSION DONE.
+  last scores : None
+  baseline    : None
+  iterations  : 90/90
+  Save Version. To continue: attach output as input dataset, set
+  RESUME_FROM to its root (contains grpo_best/ + grpo_progress.json).
+  Final model for eval_unified_v5: /kaggle/working/grpo_best
+======================================================================

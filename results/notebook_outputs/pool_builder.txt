@@ -1,0 +1,489 @@
+Looking in links: /kaggle/input/datasets/mahmoodavaram/vllm-wheels
+Installing collected packages: supervisor, setuptools, setproctitle, rignore, pycountry, pybase64, protobuf, partial-json-parser, outlines_core, opentelemetry-api, nvidia-cudnn-frontend, numpy, msgspec, loguru, llvmlite, llguidance, lark, interegular, ijson, flashinfer-cubin, fastar, diskcache, detect-installer, cuda-bindings, cbor2, astor, apache-tvm-ffi, starlette, opentelemetry-semantic-conventions, opentelemetry-proto, numba, gguf, depyf, rich-toolkit, pydantic-extra-types, prometheus-fastapi-instrumentator, opentelemetry-sdk, opentelemetry-exporter-otlp-proto-common, openai-harmony, nvidia-cutlass-dsl-libs-base, lm-format-enforcer, anthropic, torch-c-dlpack-ext, opentelemetry-semantic-conventions-ai, opentelemetry-exporter-otlp-proto-http, opentelemetry-exporter-otlp-proto-grpc, nvidia-cutlass-dsl, model-hosting-container-standards, fastapi-cloud-cli, fastapi-cli, quack-kernels, opentelemetry-exporter-otlp, mistral_common, flashinfer-python, transformers, xgrammar, compressed-tensors, vllm
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 75.2.0
+    Uninstalling setuptools-75.2.0:
+      Successfully uninstalled setuptools-75.2.0
+  Attempting uninstall: protobuf
+    Found existing installation: protobuf 5.29.5
+    Uninstalling protobuf-5.29.5:
+      Successfully uninstalled protobuf-5.29.5
+  Attempting uninstall: opentelemetry-api
+    Found existing installation: opentelemetry-api 1.38.0
+    Uninstalling opentelemetry-api-1.38.0:
+      Successfully uninstalled opentelemetry-api-1.38.0
+  Attempting uninstall: numpy
+    Found existing installation: numpy 2.4.6
+    Uninstalling numpy-2.4.6:
+      Successfully uninstalled numpy-2.4.6
+  Attempting uninstall: llvmlite
+    Found existing installation: llvmlite 0.47.0
+    Uninstalling llvmlite-0.47.0:
+      Successfully uninstalled llvmlite-0.47.0
+  Attempting uninstall: lark
+    Found existing installation: lark 1.3.1
+    Uninstalling lark-1.3.1:
+      Successfully uninstalled lark-1.3.1
+  Attempting uninstall: cuda-bindings
+    Found existing installation: cuda-bindings 13.2.0
+    Uninstalling cuda-bindings-13.2.0:
+      Successfully uninstalled cuda-bindings-13.2.0
+  Attempting uninstall: starlette
+    Found existing installation: starlette 0.52.1
+    Uninstalling starlette-0.52.1:
+      Successfully uninstalled starlette-0.52.1
+  Attempting uninstall: opentelemetry-semantic-conventions
+    Found existing installation: opentelemetry-semantic-conventions 0.59b0
+    Uninstalling opentelemetry-semantic-conventions-0.59b0:
+      Successfully uninstalled opentelemetry-semantic-conventions-0.59b0
+  Attempting uninstall: opentelemetry-proto
+    Found existing installation: opentelemetry-proto 1.38.0
+    Uninstalling opentelemetry-proto-1.38.0:
+      Successfully uninstalled opentelemetry-proto-1.38.0
+  Attempting uninstall: numba
+    Found existing installation: numba 0.65.1
+    Uninstalling numba-0.65.1:
+      Successfully uninstalled numba-0.65.1
+  Attempting uninstall: opentelemetry-sdk
+    Found existing installation: opentelemetry-sdk 1.38.0
+    Uninstalling opentelemetry-sdk-1.38.0:
+      Successfully uninstalled opentelemetry-sdk-1.38.0
+  Attempting uninstall: opentelemetry-exporter-otlp-proto-common
+    Found existing installation: opentelemetry-exporter-otlp-proto-common 1.38.0
+    Uninstalling opentelemetry-exporter-otlp-proto-common-1.38.0:
+      Successfully uninstalled opentelemetry-exporter-otlp-proto-common-1.38.0
+  Attempting uninstall: opentelemetry-exporter-otlp-proto-http
+    Found existing installation: opentelemetry-exporter-otlp-proto-http 1.38.0
+    Uninstalling opentelemetry-exporter-otlp-proto-http-1.38.0:
+      Successfully uninstalled opentelemetry-exporter-otlp-proto-http-1.38.0
+  Attempting uninstall: transformers
+    Found existing installation: transformers 5.0.0
+    Uninstalling transformers-5.0.0:
+      Successfully uninstalled transformers-5.0.0
+bigframes 2.39.0 requires google-cloud-bigquery-storage<3.0.0,>=2.30.0, which is not installed.
+google-adk 1.29.0 requires google-cloud-bigquery-storage>=2.0.0, which is not installed.
+google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.
+google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.3.3 which is incompatible.
+dask-cuda 26.2.0 requires cuda-core==0.3.*, but you have cuda-core 1.0.1 which is incompatible.
+dask-cuda 26.2.0 requires numba-cuda<0.23.0,>=0.22.1, but you have numba-cuda 0.30.2 which is incompatible.
+dopamine-rl 4.1.2 requires gym<=0.25.2, but you have gym 0.26.2 which is incompatible.
+distributed-ucxx-cu12 0.48.0 requires numba-cuda[cu12]<0.23.0,>=0.22.1, but you have numba-cuda 0.30.2 which is incompatible.
+moviepy 1.0.3 requires decorator<5.0,>=4.0.2, but you have decorator 5.3.1 which is incompatible.
+cuml-cu12 26.2.0 requires numba-cuda[cu12]<0.23.0,>=0.22.1, but you have numba-cuda 0.30.2 which is incompatible.
+google-ai-generativelanguage 0.6.15 requires protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<6.0.0dev,>=3.20.2, but you have protobuf 6.33.6 which is incompatible.
+ucxx-cu12 0.48.0 requires numba-cuda[cu12]<0.23.0,>=0.22.1, but you have numba-cuda 0.30.2 which is incompatible.
+tensorflow 2.19.0 requires numpy<2.2.0,>=1.26.0, but you have numpy 2.2.6 which is incompatible.
+tensorflow 2.19.0 requires protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<6.0.0dev,>=3.20.3, but you have protobuf 6.33.6 which is incompatible.
+cudf-cu12 26.2.1 requires numba-cuda[cu12]<0.23.0,>=0.22.2, but you have numba-cuda 0.30.2 which is incompatible.
+grpcio-status 1.71.2 requires protobuf<6.0dev,>=5.26.1, but you have protobuf 6.33.6 which is incompatible.
+google-adk 1.29.0 requires opentelemetry-api<1.39.0,>=1.36.0, but you have opentelemetry-api 1.42.1 which is incompatible.
+google-adk 1.29.0 requires opentelemetry-sdk<1.39.0,>=1.36.0, but you have opentelemetry-sdk 1.42.1 which is incompatible.
+google-adk 1.29.0 requires starlette<1.0.0,>=0.49.1, but you have starlette 1.2.1 which is incompatible.
+opentelemetry-exporter-gcp-logging 1.11.0a0 requires opentelemetry-sdk<1.39.0,>=1.35.0, but you have opentelemetry-sdk 1.42.1 which is incompatible.
+gradio 5.50.0 requires starlette<1.0,>=0.40.0, but you have starlette 1.2.1 which is incompatible.
+Successfully installed anthropic-0.107.1 apache-tvm-ffi-0.1.11 astor-0.8.1 cbor2-6.1.2 compressed-tensors-0.15.0.1 cuda-bindings-12.9.4 depyf-0.20.0 detect-installer-0.1.0 diskcache-5.6.3 fastapi-cli-0.0.24 fastapi-cloud-cli-0.19.0 fastar-0.11.0 flashinfer-cubin-0.6.6 flashinfer-python-0.6.6 gguf-0.19.0 ijson-3.5.0 interegular-0.3.3 lark-1.2.2 llguidance-1.3.0 llvmlite-0.44.0 lm-format-enforcer-0.11.3 loguru-0.7.3 mistral_common-1.11.3 model-hosting-container-standards-0.1.15 msgspec-0.21.1 numba-0.61.2 numpy-2.2.6 nvidia-cudnn-frontend-1.18.0 nvidia-cutlass-dsl-4.5.2 nvidia-cutlass-dsl-libs-base-4.5.2 openai-harmony-0.0.8 opentelemetry-api-1.42.1 opentelemetry-exporter-otlp-1.42.1 opentelemetry-exporter-otlp-proto-common-1.42.1 opentelemetry-exporter-otlp-proto-grpc-1.42.1 opentelemetry-exporter-otlp-proto-http-1.42.1 opentelemetry-proto-1.42.1 opentelemetry-sdk-1.42.1 opentelemetry-semantic-conventions-0.63b1 opentelemetry-semantic-conventions-ai-0.5.1 outlines_core-0.2.11 partial-json-parser-0.2.1.1.post7 prometheus-fastapi-instrumentator-8.0.0 protobuf-6.33.6 pybase64-1.4.3 pycountry-26.2.16 pydantic-extra-types-2.11.1 quack-kernels-0.5.0 rich-toolkit-0.20.1 rignore-0.7.6 setproctitle-1.3.7 setuptools-80.10.2 starlette-1.2.1 supervisor-4.3.0 torch-c-dlpack-ext-0.1.5 transformers-5.10.2 vllm-0.19.1 xgrammar-0.2.1
+============================================================
+Loading policy model into vLLM ...
+============================================================
+INFO 06-09 14:38:15 [utils.py:233] non-default args: {'dtype': 'bfloat16', 'seed': 42, 'max_model_len': 4096, 'gpu_memory_utilization': 0.88, 'disable_log_stats': True, 'model': '/kaggle/input/models/mahmoodavaram/distilled-qwen-sft-basic/transformers/default/1/pear_sft_epoch1'}
+INFO 06-09 14:38:25 [model.py:549] Resolved architecture: Qwen2ForCausalLM
+INFO 06-09 14:38:25 [model.py:1678] Using max model len 4096
+INFO 06-09 14:38:25 [scheduler.py:238] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 06-09 14:38:25 [vllm.py:790] Asynchronous scheduling is enabled.
+(EngineCore pid=406) INFO 06-09 14:38:32 [core.py:105] Initializing a V1 LLM engine (v0.19.1) with config: model='/kaggle/input/models/mahmoodavaram/distilled-qwen-sft-basic/transformers/default/1/pear_sft_epoch1', speculative_config=None, tokenizer='/kaggle/input/models/mahmoodavaram/distilled-qwen-sft-basic/transformers/default/1/pear_sft_epoch1', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=4096, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False), seed=42, served_model_name=/kaggle/input/models/mahmoodavaram/distilled-qwen-sft-basic/transformers/default/1/pear_sft_epoch1, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.VLLM_COMPILE: 3>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['none'], 'splitting_ops': ['vllm::unified_attention', 'vllm::unified_attention_with_output', 'vllm::unified_mla_attention', 'vllm::unified_mla_attention_with_output', 'vllm::mamba_mixer2', 'vllm::mamba_mixer', 'vllm::short_conv', 'vllm::linear_attention', 'vllm::plamo2_mamba_mixer', 'vllm::gdn_attention_core', 'vllm::olmo_hybrid_gdn_full_forward', 'vllm::kda_attention', 'vllm::sparse_attn_indexer', 'vllm::rocm_aiter_sparse_attn_indexer', 'vllm::unified_kv_cache_update', 'vllm::unified_mla_kv_cache_update'], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_images_per_batch': 0, 'compile_sizes': [], 'compile_ranges_endpoints': [16384], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_AND_PIECEWISE: (2, 1)>, 'cudagraph_num_of_warmups': 1, 'cudagraph_capture_sizes': [1, 2, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256, 272, 288, 304, 320, 336, 352, 368, 384, 400, 416, 432, 448, 464, 480, 496, 512], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': False, 'fuse_act_quant': False, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False}, 'max_cudagraph_capture_size': 512, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': True, 'static_all_moe_layers': []}
+(EngineCore pid=406) INFO 06-09 14:38:33 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://172.19.2.2:56457 backend=nccl
+(EngineCore pid=406) INFO 06-09 14:38:33 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+[W609 14:38:33.007809184 socket.cpp:207] [c10d] The hostname of the client socket cannot be retrieved. err=-3
+(EngineCore pid=406) INFO 06-09 14:38:34 [gpu_model_runner.py:4735] Starting to load model /kaggle/input/models/mahmoodavaram/distilled-qwen-sft-basic/transformers/default/1/pear_sft_epoch1...
+(EngineCore pid=406) INFO 06-09 14:38:34 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+(EngineCore pid=406) INFO 06-09 14:38:34 [flash_attn.py:596] Using FlashAttention version 2
+(EngineCore pid=406) INFO 06-09 14:38:34 [weight_utils.py:848] Prefetching checkpoint files into page cache started (in background)
+(EngineCore pid=406) <frozen importlib._bootstrap_external>:1301: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+(EngineCore pid=406) <frozen importlib._bootstrap_external>:1301: FutureWarning: The cuda.nvrtc module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.nvrtc module instead.
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+(EngineCore pid=406) INFO 06-09 14:42:26 [weight_utils.py:825] Prefetching checkpoint files: 10% (1/1)
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [03:52<00:00, 232.11s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [03:52<00:00, 232.11s/it]
+(EngineCore pid=406) 
+(EngineCore pid=406) INFO 06-09 14:42:27 [default_loader.py:384] Loading weights took 232.59 seconds
+(EngineCore pid=406) INFO 06-09 14:42:27 [weight_utils.py:843] Prefetching checkpoint files into page cache finished in 232.59s
+(EngineCore pid=406) INFO 06-09 14:42:28 [gpu_model_runner.py:4820] Model loading took 14.27 GiB memory and 232.957789 seconds
+(EngineCore pid=406) INFO 06-09 14:42:32 [backends.py:1051] Using cache directory: /root/.cache/vllm/torch_compile_cache/d8be96b50b/rank_0_0/backbone for vLLM's torch.compile
+(EngineCore pid=406) INFO 06-09 14:42:32 [backends.py:1111] Dynamo bytecode transform time: 4.21 s
+(EngineCore pid=406) INFO 06-09 14:42:36 [backends.py:372] Cache the graph of compile range (1, 16384) for later use
+(EngineCore pid=406) INFO 06-09 14:42:38 [backends.py:390] Compiling a graph for compile range (1, 16384) takes 5.97 s
+(EngineCore pid=406) INFO 06-09 14:42:39 [decorators.py:655] saved AOT compiled function to /root/.cache/vllm/torch_compile_cache/torch_aot_compile/98303d64988bb9cd5601c43b722d7cfac5fdbdd1900110d81f858c5349ca70ad/rank_0_0/model
+(EngineCore pid=406) INFO 06-09 14:42:39 [monitor.py:48] torch.compile took 10.86 s in total
+(EngineCore pid=406) INFO 06-09 14:42:40 [monitor.py:76] Initial profiling/warmup run took 1.27 s
+(EngineCore pid=406) INFO 06-09 14:42:44 [kv_cache_utils.py:829] Overriding num_gpu_blocks=0 with num_gpu_blocks_override=512
+(EngineCore pid=406) INFO 06-09 14:42:44 [gpu_model_runner.py:5876] Profiling CUDA graph memory: PIECEWISE=51 (largest=512), FULL=51 (largest=512)
+(EngineCore pid=406) INFO 06-09 14:43:24 [gpu_model_runner.py:5955] Estimated CUDA graph memory: 0.41 GiB total
+(EngineCore pid=406) INFO 06-09 14:43:25 [gpu_worker.py:436] Available KV cache memory: 66.84 GiB
+(EngineCore pid=406) INFO 06-09 14:43:25 [gpu_worker.py:470] In v0.19, CUDA graph memory profiling will be enabled by default (VLLM_MEMORY_PROFILER_ESTIMATE_CUDAGRAPHS=1), which more accurately accounts for CUDA graph memory during KV cache allocation. To try it now, set VLLM_MEMORY_PROFILER_ESTIMATE_CUDAGRAPHS=1 and increase --gpu-memory-utilization from 0.8800 to 0.8844 to maintain the same effective KV cache size.
+(EngineCore pid=406) INFO 06-09 14:43:25 [kv_cache_utils.py:1319] GPU KV cache size: 1,251,520 tokens
+(EngineCore pid=406) INFO 06-09 14:43:25 [kv_cache_utils.py:1324] Maximum concurrency for 4,096 tokens per request: 305.55x
+(EngineCore pid=406) 2026-06-09 14:43:25,337 - INFO - autotuner.py:262 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+(EngineCore pid=406) 2026-06-09 14:43:25,342 - INFO - autotuner.py:268 - flashinfer.jit: [Autotuner]: Autotuning process ends
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 51/51 [00:01<00:00, 39.63it/s]
+Capturing CUDA graphs (decode, FULL): 100%|██████████| 51/51 [00:01<00:00, 45.71it/s]
+(EngineCore pid=406) INFO 06-09 14:43:28 [gpu_model_runner.py:6046] Graph capturing finished in 3 secs, took 0.38 GiB
+(EngineCore pid=406) INFO 06-09 14:43:28 [gpu_worker.py:597] CUDA graph pool memory: 0.38 GiB (actual), 0.41 GiB (estimated), difference: 0.04 GiB (10.4%).
+(EngineCore pid=406) INFO 06-09 14:43:28 [core.py:283] init engine (profile, create kv cache, warmup model) took 60.72 seconds
+(EngineCore pid=406) INFO 06-09 14:43:30 [vllm.py:790] Asynchronous scheduling is enabled.
+
+============================================================
+DOMAIN: MATH  band=[2,5]  target=1000
+Sources: gsm8k → hendrycks_math
+============================================================
+  [resume] No progress file for math — starting fresh.
+  Resuming: kept=0, evaluated=0, need 1000 more.
+
+  [math] Loading source: gsm8k  path=/kaggle/input/datasets/mahmoodavaram/qwen-riva-datasets/train/gsm8k
+    Rows=7473  Cols=['question', 'answer']
+    question_col='question'  answer_col='answer'  choices_col=None
+    Loaded=7473  skipped(empty=0, dupe=0)
+
+  [gsm8k] 7473 new problems to evaluate.
+
+  [gsm8k] chunk [0:500] — 500 problems
+    Tokenising 500 prompts ... done. range [59, 182] tokens
+    2 batches | 8 rollouts × 2 = 16 generate() calls | max_tokens=2048
+    truncated (finish=='length'): 503/4000 (12.6%)   <-- raise MAXTOK
+  pass dist={0: 9, 1: 13, 2: 6, 3: 7, 4: 31, 5: 37, 6: 73, 7: 105, 8: 219}  kept=81/1000
+  [checkpoint] math: kept=81, evaluated=500 → /kaggle/working/progress_math.json
+
+  [gsm8k] chunk [500:1000] — 500 problems
+    Tokenising 500 prompts ... done. range [60, 173] tokens
+    2 batches | 8 rollouts × 2 = 16 generate() calls | max_tokens=2048
+    truncated (finish=='length'): 483/4000 (12.1%)   <-- raise MAXTOK
+  pass dist={0: 8, 1: 6, 2: 11, 3: 16, 4: 25, 5: 43, 6: 86, 7: 118, 8: 187}  kept=176/1000
+  [checkpoint] math: kept=176, evaluated=1000 → /kaggle/working/progress_math.json
+
+  [gsm8k] chunk [1000:1500] — 500 problems
+    Tokenising 500 prompts ... done. range [56, 209] tokens
+    2 batches | 8 rollouts × 2 = 16 generate() calls | max_tokens=2048
+    truncated (finish=='length'): 463/4000 (11.6%)   <-- raise MAXTOK
+  pass dist={0: 7, 1: 7, 2: 6, 3: 16, 4: 27, 5: 39, 6: 74, 7: 138, 8: 186}  kept=264/1000
+  [checkpoint] math: kept=264, evaluated=1500 → /kaggle/working/progress_math.json
+
+  [gsm8k] chunk [1500:2000] — 500 problems
+    Tokenising 500 prompts ... done. range [59, 204] tokens
+    2 batches | 8 rollouts × 2 = 16 generate() calls | max_tokens=2048
+    truncated (finish=='length'): 507/4000 (12.7%)   <-- raise MAXTOK
+  pass dist={0: 6, 1: 5, 2: 5, 3: 12, 4: 25, 5: 43, 6: 70, 7: 118, 8: 216}  kept=349/1000
+  [checkpoint] math: kept=349, evaluated=2000 → /kaggle/working/progress_math.json
+
+  [gsm8k] chunk [2000:2500] — 500 problems
+    Tokenising 500 prompts ... done. range [58, 231] tokens
+    2 batches | 8 rollouts × 2 = 16 generate() calls | max_tokens=2048
+    truncated (finish=='length'): 444/4000 (11.1%)   <-- raise MAXTOK
+  pass dist={0: 9, 1: 3, 2: 10, 3: 15, 4: 24, 5: 49, 6: 75, 7: 125, 8: 190}  kept=447/1000
+  [checkpoint] math: kept=447, evaluated=2500 → /kaggle/working/progress_math.json
+
+  [gsm8k] chunk [2500:3000] — 500 problems
+    Tokenising 500 prompts ... done. range [58, 208] tokens
+    2 batches | 8 rollouts × 2 = 16 generate() calls | max_tokens=2048
+    truncated (finish=='length'): 468/4000 (11.7%)   <-- raise MAXTOK
+  pass dist={0: 12, 1: 5, 2: 15, 3: 16, 4: 20, 5: 40, 6: 79, 7: 141, 8: 172}  kept=538/1000
+  [checkpoint] math: kept=538, evaluated=3000 → /kaggle/working/progress_math.json
+
+  [gsm8k] chunk [3000:3500] — 500 problems
+    Tokenising 500 prompts ... done. range [62, 182] tokens
+    2 batches | 8 rollouts × 2 = 16 generate() calls | max_tokens=2048
+    truncated (finish=='length'): 497/4000 (12.4%)   <-- raise MAXTOK
+  pass dist={0: 9, 1: 6, 2: 12, 3: 19, 4: 22, 5: 47, 6: 89, 7: 119, 8: 177}  kept=638/1000
+  [checkpoint] math: kept=638, evaluated=3500 → /kaggle/working/progress_math.json
+
+  [gsm8k] chunk [3500:4000] — 500 problems
+    Tokenising 500 prompts ... done. range [60, 249] tokens
+    2 batches | 8 rollouts × 2 = 16 generate() calls | max_tokens=2048
+    truncated (finish=='length'): 500/4000 (12.5%)   <-- raise MAXTOK
+  pass dist={0: 6, 1: 8, 2: 8, 3: 13, 4: 21, 5: 41, 6: 66, 7: 135, 8: 202}  kept=721/1000
+  [checkpoint] math: kept=721, evaluated=4000 → /kaggle/working/progress_math.json
+
+  [gsm8k] chunk [4000:4500] — 500 problems
+    Tokenising 500 prompts ... done. range [49, 225] tokens
+    2 batches | 8 rollouts × 2 = 16 generate() calls | max_tokens=2048
+    truncated (finish=='length'): 465/4000 (11.6%)   <-- raise MAXTOK
+  pass dist={0: 7, 1: 12, 2: 10, 3: 20, 4: 24, 5: 40, 6: 72, 7: 116, 8: 199}  kept=815/1000
+  [checkpoint] math: kept=815, evaluated=4500 → /kaggle/working/progress_math.json
+
+  [gsm8k] chunk [4500:5000] — 500 problems
+    Tokenising 500 prompts ... done. range [60, 194] tokens
+    2 batches | 8 rollouts × 2 = 16 generate() calls | max_tokens=2048
+    truncated (finish=='length'): 508/4000 (12.7%)   <-- raise MAXTOK
+  pass dist={0: 5, 1: 7, 2: 9, 3: 19, 4: 27, 5: 45, 6: 69, 7: 112, 8: 207}  kept=915/1000
+  [checkpoint] math: kept=915, evaluated=5000 → /kaggle/working/progress_math.json
+
+  [gsm8k] chunk [5000:5500] — 500 problems
+    Tokenising 500 prompts ... done. range [56, 172] tokens
+    2 batches | 8 rollouts × 2 = 16 generate() calls | max_tokens=2048
+    truncated (finish=='length'): 496/4000 (12.4%)   <-- raise MAXTOK
+  pass dist={0: 9, 1: 9, 2: 6, 3: 18, 4: 24, 5: 34, 6: 64, 7: 151, 8: 185}  kept=997/1000
+  [checkpoint] math: kept=997, evaluated=5500 → /kaggle/working/progress_math.json
+
+  [gsm8k] chunk [5500:6000] — 500 problems
+    Tokenising 500 prompts ... done. range [59, 171] tokens
+    2 batches | 8 rollouts × 2 = 16 generate() calls | max_tokens=2048
+    truncated (finish=='length'): 531/4000 (13.3%)   <-- raise MAXTOK
+  pass dist={0: 7, 1: 7, 2: 11, 3: 20, 4: 17, 5: 33, 6: 78, 7: 118, 8: 209}  kept=1000/1000
+  [checkpoint] math: kept=1000, evaluated=6000 → /kaggle/working/progress_math.json
+  Target hit mid-source, stopping gsm8k.
+
+  Target reached, skipping hendrycks_math.
+Saving the dataset (0/1 shards):   0%|          | 0/1000 [00:00<?, ? examples/s]
+Saved pool → /kaggle/working/math_pool  (1000 rows)
+Summary:
+{
+  "domain": "math",
+  "scoring_model": "pear_sft_epoch1",
+  "sources_tried": [
+    "gsm8k",
+    "hendrycks_math"
+  ],
+  "n_rollouts": 8,
+  "window": [
+    2,
+    5
+  ],
+  "target": 1000,
+  "total_kept": 1000,
+  "total_evaluated": 6000,
+  "pass_distribution": {
+    "2": 98,
+    "3": 172,
+    "4": 272,
+    "5": 458
+  },
+  "source_distribution": {
+    "gsm8k": 1000
+  }
+}
+Reload check: 1000 rows | cols: ['id', 'domain', 'question', 'gold', 'pass_count', 'source']
+  [0] src=gsm8k pass=4 gold=17 id=61370c7e2f45142a
+  [1] src=gsm8k pass=5 gold=1260 id=0822e7f5be743639
+  [2] src=gsm8k pass=4 gold=3440 id=8f39cbd2e759118a
+
+============================================================
+DOMAIN: SQA  band=[2,5]  target=1500
+Sources: strategyqa → csqa2
+============================================================
+  [resume] No progress file for sqa — starting fresh.
+  Resuming: kept=0, evaluated=0, need 1500 more.
+
+  [sqa] Loading source: strategyqa  path=/kaggle/input/datasets/mahmoodavaram/qwen-riva-datasets/train/strategyqa
+    Rows=1603  Cols=['qid', 'term', 'description', 'question', 'answer', 'facts']
+    question_col='question'  answer_col='answer'  choices_col=None
+    Loaded=1603  skipped(empty=0, dupe=0)
+
+  [strategyqa] 1603 new problems to evaluate.
+
+  [strategyqa] chunk [0:500] — 500 problems
+    Tokenising 500 prompts ... done. range [43, 68] tokens
+    2 batches | 8 rollouts × 2 = 16 generate() calls | max_tokens=1024
+    truncated (finish=='length'): 916/4000 (22.9%)   <-- raise MAXTOK
+  pass dist={0: 7, 1: 24, 2: 46, 3: 47, 4: 56, 5: 59, 6: 81, 7: 87, 8: 93}  kept=208/1500
+  [checkpoint] sqa: kept=208, evaluated=500 → /kaggle/working/progress_sqa.json
+
+  [strategyqa] chunk [500:1000] — 500 problems
+    Tokenising 500 prompts ... done. range [43, 61] tokens
+    2 batches | 8 rollouts × 2 = 16 generate() calls | max_tokens=1024
+    truncated (finish=='length'): 942/4000 (23.6%)   <-- raise MAXTOK
+  pass dist={0: 8, 1: 22, 2: 34, 3: 42, 4: 54, 5: 78, 6: 85, 7: 96, 8: 81}  kept=416/1500
+  [checkpoint] sqa: kept=416, evaluated=1000 → /kaggle/working/progress_sqa.json
+
+  [strategyqa] chunk [1000:1500] — 500 problems
+    Tokenising 500 prompts ... done. range [43, 65] tokens
+    2 batches | 8 rollouts × 2 = 16 generate() calls | max_tokens=1024
+    truncated (finish=='length'): 927/4000 (23.2%)   <-- raise MAXTOK
+  pass dist={0: 12, 1: 28, 2: 28, 3: 62, 4: 57, 5: 64, 6: 68, 7: 93, 8: 88}  kept=627/1500
+  [checkpoint] sqa: kept=627, evaluated=1500 → /kaggle/working/progress_sqa.json
+
+  [strategyqa] chunk [1500:1603] — 103 problems
+    Tokenising 103 prompts ... done. range [45, 60] tokens
+    1 batches | 8 rollouts × 1 = 8 generate() calls | max_tokens=1024
+    truncated (finish=='length'): 205/824 (24.9%)   <-- raise MAXTOK
+  pass dist={0: 2, 1: 8, 2: 6, 3: 10, 4: 12, 5: 10, 6: 17, 7: 20, 8: 18}  kept=665/1500
+  [checkpoint] sqa: kept=665, evaluated=1603 → /kaggle/working/progress_sqa.json
+
+  [sqa] Loading source: csqa2  path=/kaggle/input/datasets/mahmoodavaram/qwen-riva-datasets/train/csqa2
+    Rows=9264  Cols=['id', 'question', 'answer', 'confidence', 'date', 'relational_prompt', 'topic_prompt', 'relational_prompt_used', 'topic_prompt_used', 'validations']
+    question_col='question'  answer_col='answer'  choices_col=None
+    Loaded=9259  skipped(empty=0, dupe=5)
+
+  [csqa2] 9259 new problems to evaluate.
+
+  [csqa2] chunk [0:500] — 500 problems
+    Tokenising 500 prompts ... done. range [42, 89] tokens
+    2 batches | 8 rollouts × 2 = 16 generate() calls | max_tokens=1024
+    truncated (finish=='length'): 1361/4000 (34.0%)   <-- raise MAXTOK
+  pass dist={0: 6, 1: 24, 2: 36, 3: 35, 4: 69, 5: 55, 6: 96, 7: 89, 8: 90}  kept=860/1500
+  [checkpoint] sqa: kept=860, evaluated=2103 → /kaggle/working/progress_sqa.json
+
+  [csqa2] chunk [500:1000] — 500 problems
+    Tokenising 500 prompts ... done. range [41, 86] tokens
+    2 batches | 8 rollouts × 2 = 16 generate() calls | max_tokens=1024
+    truncated (finish=='length'): 1341/4000 (33.5%)   <-- raise MAXTOK
+  pass dist={0: 10, 1: 26, 2: 33, 3: 47, 4: 63, 5: 63, 6: 69, 7: 94, 8: 95}  kept=1066/1500
+  [checkpoint] sqa: kept=1066, evaluated=2603 → /kaggle/working/progress_sqa.json
+
+  [csqa2] chunk [1000:1500] — 500 problems
+    Tokenising 500 prompts ... done. range [41, 78] tokens
+    2 batches | 8 rollouts × 2 = 16 generate() calls | max_tokens=1024
+    truncated (finish=='length'): 1314/4000 (32.9%)   <-- raise MAXTOK
+  pass dist={0: 11, 1: 17, 2: 29, 3: 29, 4: 64, 5: 60, 6: 85, 7: 102, 8: 103}  kept=1248/1500
+  [checkpoint] sqa: kept=1248, evaluated=3103 → /kaggle/working/progress_sqa.json
+
+  [csqa2] chunk [1500:2000] — 500 problems
+    Tokenising 500 prompts ... done. range [42, 82] tokens
+    2 batches | 8 rollouts × 2 = 16 generate() calls | max_tokens=1024
+    truncated (finish=='length'): 1307/4000 (32.7%)   <-- raise MAXTOK
+  pass dist={0: 10, 1: 21, 2: 46, 3: 50, 4: 59, 5: 64, 6: 61, 7: 84, 8: 105}  kept=1467/1500
+  [checkpoint] sqa: kept=1467, evaluated=3603 → /kaggle/working/progress_sqa.json
+
+  [csqa2] chunk [2000:2500] — 500 problems
+    Tokenising 500 prompts ... done. range [42, 78] tokens
+    2 batches | 8 rollouts × 2 = 16 generate() calls | max_tokens=1024
+    truncated (finish=='length'): 1302/4000 (32.5%)   <-- raise MAXTOK
+  pass dist={0: 12, 1: 23, 2: 32, 3: 58, 4: 51, 5: 67, 6: 76, 7: 90, 8: 91}  kept=1500/1500
+  [checkpoint] sqa: kept=1500, evaluated=4103 → /kaggle/working/progress_sqa.json
+  Target hit mid-source, stopping csqa2.
+Saving the dataset (0/1 shards):   0%|          | 0/1500 [00:00<?, ? examples/s]
+Saved pool → /kaggle/working/sqa_pool  (1500 rows)
+Summary:
+{
+  "domain": "sqa",
+  "scoring_model": "pear_sft_epoch1",
+  "sources_tried": [
+    "strategyqa",
+    "csqa2"
+  ],
+  "n_rollouts": 8,
+  "window": [
+    2,
+    5
+  ],
+  "target": 1500,
+  "total_kept": 1500,
+  "total_evaluated": 4103,
+  "pass_distribution": {
+    "2": 264,
+    "3": 333,
+    "4": 444,
+    "5": 459
+  },
+  "source_distribution": {
+    "strategyqa": 665,
+    "csqa2": 835
+  }
+}
+Reload check: 1500 rows | cols: ['id', 'domain', 'question', 'gold', 'pass_count', 'source']
+  [0] src=strategyqa pass=4 gold=True id=5eb4e71f10a3e9ae
+  [1] src=csqa2 pass=4 gold=no id=6271b146d20f8a7d
+  [2] src=csqa2 pass=4 gold=no id=7a1ee082def33f3b
+
+============================================================
+DOMAIN: MMLU  band=[2,5]  target=800
+Sources: mmlu
+============================================================
+  [resume] No progress file for mmlu — starting fresh.
+  Resuming: kept=0, evaluated=0, need 800 more.
+
+  [mmlu] Loading source: mmlu  path=/kaggle/input/datasets/mahmoodavaram/qwen-riva-datasets/train/mmlu
+    Rows=99842  Cols=['question', 'subject', 'choices', 'answer']
+    question_col='question'  answer_col='answer'  choices_col='choices'
+    Loaded=98640  skipped(empty=0, dupe=1202)  [multiple-choice: options folded into prompt]
+
+  [mmlu] 98640 new problems to evaluate.
+
+  [mmlu] chunk [0:500] — 500 problems
+    Tokenising 500 prompts ... done. range [59, 890] tokens
+    4 batches | 8 rollouts × 4 = 32 generate() calls | max_tokens=768
+    truncated (finish=='length'): 891/4000 (22.3%)   <-- raise MAXTOK
+  pass dist={0: 15, 1: 20, 2: 19, 3: 21, 4: 28, 5: 46, 6: 41, 7: 99, 8: 211}  kept=114/800
+  [checkpoint] mmlu: kept=114, evaluated=500 → /kaggle/working/progress_mmlu.json
+
+  [mmlu] chunk [500:1000] — 500 problems
+    Tokenising 500 prompts ... done. range [59, 954] tokens
+    4 batches | 8 rollouts × 4 = 32 generate() calls | max_tokens=768
+    truncated (finish=='length'): 854/4000 (21.4%)   <-- raise MAXTOK
+  pass dist={0: 12, 1: 11, 2: 23, 3: 24, 4: 32, 5: 43, 6: 53, 7: 93, 8: 209}  kept=236/800
+  [checkpoint] mmlu: kept=236, evaluated=1000 → /kaggle/working/progress_mmlu.json
+
+  [mmlu] chunk [1000:1500] — 500 problems
+    Tokenising 500 prompts ... done. range [61, 1251] tokens
+    5 batches | 8 rollouts × 5 = 40 generate() calls | max_tokens=768
+    truncated (finish=='length'): 905/4000 (22.6%)   <-- raise MAXTOK
+  pass dist={0: 17, 1: 11, 2: 21, 3: 29, 4: 21, 5: 29, 6: 45, 7: 93, 8: 234}  kept=336/800
+  [checkpoint] mmlu: kept=336, evaluated=1500 → /kaggle/working/progress_mmlu.json
+
+  [mmlu] chunk [1500:2000] — 500 problems
+    Tokenising 500 prompts ... done. range [60, 999] tokens
+    4 batches | 8 rollouts × 4 = 32 generate() calls | max_tokens=768
+    truncated (finish=='length'): 836/4000 (20.9%)   <-- raise MAXTOK
+  pass dist={0: 15, 1: 12, 2: 12, 3: 20, 4: 31, 5: 29, 6: 47, 7: 104, 8: 230}  kept=428/800
+  [checkpoint] mmlu: kept=428, evaluated=2000 → /kaggle/working/progress_mmlu.json
+
+  [mmlu] chunk [2000:2500] — 500 problems
+    Tokenising 500 prompts ... done. range [61, 1197] tokens
+    5 batches | 8 rollouts × 5 = 40 generate() calls | max_tokens=768
+    truncated (finish=='length'): 843/4000 (21.1%)   <-- raise MAXTOK
+  pass dist={0: 7, 1: 23, 2: 18, 3: 18, 4: 22, 5: 38, 6: 50, 7: 73, 8: 251}  kept=524/800
+  [checkpoint] mmlu: kept=524, evaluated=2500 → /kaggle/working/progress_mmlu.json
+
+  [mmlu] chunk [2500:3000] — 500 problems
+    Tokenising 500 prompts ... done. range [65, 1001] tokens
+    4 batches | 8 rollouts × 4 = 32 generate() calls | max_tokens=768
+    truncated (finish=='length'): 911/4000 (22.8%)   <-- raise MAXTOK
+  pass dist={0: 20, 1: 19, 2: 15, 3: 24, 4: 18, 5: 44, 6: 45, 7: 96, 8: 219}  kept=625/800
+  [checkpoint] mmlu: kept=625, evaluated=3000 → /kaggle/working/progress_mmlu.json
+
+  [mmlu] chunk [3000:3500] — 500 problems
+    Tokenising 500 prompts ... done. range [60, 889] tokens
+    4 batches | 8 rollouts × 4 = 32 generate() calls | max_tokens=768
+    truncated (finish=='length'): 919/4000 (23.0%)   <-- raise MAXTOK
+  pass dist={0: 17, 1: 15, 2: 18, 3: 28, 4: 20, 5: 35, 6: 45, 7: 87, 8: 235}  kept=726/800
+  [checkpoint] mmlu: kept=726, evaluated=3500 → /kaggle/working/progress_mmlu.json
+
+  [mmlu] chunk [3500:4000] — 500 problems
+    Tokenising 500 prompts ... done. range [61, 997] tokens
+    4 batches | 8 rollouts × 4 = 32 generate() calls | max_tokens=768
+    truncated (finish=='length'): 877/4000 (21.9%)   <-- raise MAXTOK
+  pass dist={0: 23, 1: 17, 2: 10, 3: 26, 4: 26, 5: 33, 6: 48, 7: 86, 8: 231}  kept=800/800
+  [checkpoint] mmlu: kept=800, evaluated=4000 → /kaggle/working/progress_mmlu.json
+  Target hit mid-source, stopping mmlu.
+Saving the dataset (0/1 shards):   0%|          | 0/800 [00:00<?, ? examples/s]
+Saved pool → /kaggle/working/mmlu_pool  (800 rows)
+Summary:
+{
+  "domain": "mmlu",
+  "scoring_model": "pear_sft_epoch1",
+  "sources_tried": [
+    "mmlu"
+  ],
+  "n_rollouts": 8,
+  "window": [
+    2,
+    5
+  ],
+  "target": 800,
+  "total_kept": 800,
+  "total_evaluated": 4000,
+  "pass_distribution": {
+    "2": 134,
+    "3": 183,
+    "4": 193,
+    "5": 290
+  },
+  "source_distribution": {
+    "mmlu": 800
+  }
+}
+Reload check: 800 rows | cols: ['id', 'domain', 'question', 'gold', 'pass_count', 'source']
+  [0] src=mmlu pass=2 gold=B id=295e1827b7f120bc
+  [1] src=mmlu pass=3 gold=C id=123cd68e0434340c
+  [2] src=mmlu pass=2 gold=D id=d0ae091bf89bad59
+
+============================================================
+All pools ready under /kaggle/working
+============================================================
